@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Как мы обращаемся с данными — Моя карта</title>
+<meta name="description" content="Что собирает «Моя карта», зачем, где хранится и как всё удалить.">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=clash-display@500,600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0e0f11;--panel:#16171a;--line:#2a2c31;--text:#ecebe6;--mute:#9a9890;--gold:#e8b04a;--ok:#5cc28a}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--text);font:15px/1.6 Satoshi,system-ui,sans-serif}
+main{max-width:760px;margin:0 auto;padding:28px 20px 64px}
+a{color:var(--gold)}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:22px}
+.back{font-size:14px;text-decoration:none}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.lang button{background:none;border:0;color:var(--mute);padding:6px 14px;font:600 13px Satoshi,sans-serif;cursor:pointer}
+.lang button.on{background:var(--gold);color:#111}
+h1{font:600 clamp(26px,5vw,36px)/1.15 'Clash Display',Satoshi,sans-serif;margin:0 0 10px;letter-spacing:-.01em}
+.lead{color:var(--mute);font-size:16px;margin:0 0 26px;max-width:62ch}
+.pledge{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:0 0 30px}
+.pledge div{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px}
+.pledge b{display:block;font-size:14px;margin-bottom:4px}.pledge span{color:var(--mute);font-size:13px;line-height:1.45;display:block}
+h2{font:600 19px/1.3 'Clash Display',Satoshi,sans-serif;margin:30px 0 10px}
+table{width:100%;border-collapse:collapse;font-size:14px;margin:6px 0 4px}
+th,td{text-align:left;vertical-align:top;padding:10px 10px 10px 0;border-bottom:1px solid var(--line)}
+th{color:var(--mute);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+td:first-child{font-weight:600;width:28%}
+.tag{display:inline-block;font-size:11px;font-weight:700;padding:1px 8px;border-radius:999px;margin-top:4px}
+.req{background:rgba(232,176,74,.15);color:var(--gold)}.opt{background:rgba(92,194,138,.14);color:var(--ok)}
+ul{padding-left:20px;margin:6px 0}li{margin:4px 0}
+.note{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:10px;padding:12px 14px;font-size:14px;color:var(--text);margin:12px 0}
+.fine{color:var(--mute);font-size:13px;margin-top:36px;border-top:1px solid var(--line);padding-top:16px}
+[data-l]{display:none}html[lang=ru] [data-l=ru],html[lang=en] [data-l=en]{display:block}
+html[lang=ru] span[data-l=ru],html[lang=en] span[data-l=en]{display:inline}
+@media (max-width:560px){td:first-child{width:auto}table,tbody,tr,td{display:block}th{display:none}td{border:0;padding:4px 0}tr{border-bottom:1px solid var(--line);padding:8px 0}}
+</style>
+</head>
+<body>
+<main>
+<div class="top">
+  <a class="back" href="./"><span data-l="ru">← К карте</span><span data-l="en">← Back to the map</span></a>
+  <div class="lang" role="group" aria-label="Language"><button data-set="ru">RU</button><button data-set="en">EN</button></div>
+</div>
+
+<!-- ===================== RU ===================== -->
+<section data-l="ru">
+<h1>Как мы обращаемся с твоими данными</h1>
+<p class="lead">Коротко: мы берём только то, без чего не собрать тебе план. Всё остальное спрашиваем отдельно, объясняем зачем, и всё можно выключить или удалить в один клик.</p>
+
+<div class="pledge">
+  <div><b>Не продаём</b><span>Никому и никогда: ни рекламным сетям, ни партнёрам, ни «аналитическим компаниям».</span></div>
+  <div><b>Без чужих трекеров</b><span>На сайте нет Google Analytics, пикселей Meta и TikTok, рекламных cookie.</span></div>
+  <div><b>Минимум</b><span>Не просим телефон, почту, документы и платёжные данные.</span></div>
+  <div><b>Твоё — под твоим контролем</b><span>Скачать всё или удалить аккаунт — в личном кабинете, сразу и без писем в поддержку.</span></div>
+</div>
+
+<h2>Что мы храним и зачем</h2>
+<table>
+<tr><th>Данные</th><th>Зачем</th><th>Что будет без них</th></tr>
+<tr><td>Случайный ID устройства<br><span class="tag req">нужно для работы</span></td><td>Чтобы твои отметки и планы открывались именно у тебя. Это не имя и не номер телефона, а случайная строка, хранится в cookie браузера.</td><td>Сервис не сможет ничего сохранить.</td></tr>
+<tr><td>Отметки, свои места, планы, коллекции<br><span class="tag req">нужно для работы</span></td><td>Это и есть твоя карта: «хочу», «был», «любимое», сохранённые сценарии.</td><td>Нечего будет показывать после перезагрузки.</td></tr>
+<tr><td>Настройки: имя (по желанию), интересы, район старта, «не люблю толпы»<br><span class="tag req">ты вводишь сам</span></td><td>Чтобы агент обращался по имени и строил маршрут от твоего района.</td><td>Планы будут общими, от Downtown.</td></tr>
+<tr><td>Геолокация<br><span class="tag opt">только по кнопке</span></td><td>Посчитать дорогу от того места, где ты сейчас. Берём одну точку, когда ты нажал «где я», округляем примерно до 10 м. Не следим за перемещениями.</td><td>Считаем от выбранного района.</td></tr>
+<tr><td>Оценки планов и мест («зашло / не зашло»)<br><span class="tag opt">персонализация — по согласию</span></td><td>Чтобы агент повторял то, что понравилось, и не предлагал то, что не зашло.</td><td>Каждый план — с чистого листа.</td></tr>
+<tr><td>Как ты пользуешься картой (вкладки, кнопки, время сборки плана)<br><span class="tag opt">аналитика — по согласию</span></td><td>Понять, где неудобно и что улучшить. Смотрим в целом по всем, а не следим за конкретным человеком.</td><td>Считаем только обезличенно: идентификатор меняется каждый день, связать дни между собой нельзя.</td></tr>
+<tr><td>Новости и приглашения в тесты<br><span class="tag opt">по согласию</span></td><td>Изредка написать, когда появится что-то важное: новый эмират, новые функции.</td><td>Ничего не пишем.</td></tr>
+<tr><td>Отзывы через кнопку «Отзыв»</td><td>Читаем сами, чтобы чинить и улучшать. Контакт — только если ты его оставил.</td><td>—</td></tr>
+<tr><td>Вход через Telegram<br><span class="tag opt">когда включим, по желанию</span></td><td>ID Telegram, ник и аватар — чтобы входить с любого устройства. Номер телефона Telegram нам не передаёт.</td><td>Вход по личной ссылке, как сейчас.</td></tr>
+</table>
+
+<h2>Чего мы не собираем</h2>
+<ul>
+<li>Телефон, почту, паспортные и платёжные данные.</li>
+<li>Постоянное отслеживание местоположения.</li>
+<li>IP-адрес в открытом виде: для защиты от перегрузки храним только его хеш с секретной «солью», и он меняется каждый день.</li>
+<li>Данные о других сайтах, которые ты посещаешь.</li>
+</ul>
+
+<h2>Как работает ИИ-агент</h2>
+<p>Чтобы собрать план, сервер отправляет модели ИИ (сейчас Claude от Anthropic, резервные — DeepSeek, Qwen, GLM, Gemini через провайдера WaveSpeed) текст твоего запроса, интересы, район старта, имя (если указал), погоду, время и каталог мест. Твой ID, отметки других людей и личные данные сверх этого модели не уходят. Провайдеры обрабатывают запрос, чтобы вернуть ответ. Поэтому не пиши в запросе то, чем не хочешь делиться: паспортные данные, пароли, здоровье.</p>
+
+<h2>Где и как хранится</h2>
+<ul>
+<li>База данных — Supabase (PostgreSQL), дата-центр в ЕС (Франкфурт). Данные шифруются при передаче (TLS) и на диске.</li>
+<li>Доступ к таблицам закрыт правилами на уровне каждой строки. Даже с публичным ключом базы ничего не прочитать: нужен секретный ключ сервера, который не попадает в браузер.</li>
+<li>Твои планы видишь только ты. Если поделишься ссылкой, получатель увидит план без твоей точки старта.</li>
+<li>Несохранённые планы — хранятся последние 40, старые удаляются автоматически. Аналитика — не дольше 12 месяцев.</li>
+</ul>
+
+<h2>Твои права</h2>
+<ul>
+<li><b>Посмотреть и скачать</b> всё, что мы о тебе храним, — кабинет → «Скачать мои данные» (JSON-файл).</li>
+<li><b>Изменить согласия</b> в любой момент — кабинет → «Мои данные». Если выключить аналитику, прошлые события обезличатся.</li>
+<li><b>Удалить аккаунт</b> — кабинет → «Удалить аккаунт». Стираем профиль, планы, оценки, отзывы и события сразу и навсегда.</li>
+<li>Вопросы — через кнопку «Отзыв» на карте.</li>
+</ul>
+
+<div class="note">Мы следуем принципам закона ОАЭ о защите персональных данных (<a href="https://u.ae/en/about-the-uae/digital-uae/data/data-protection-laws" target="_blank" rel="noopener">Federal Decree-Law No. 45 of 2021, PDPL</a>) и GDPR: законность и прозрачность, минимум данных, ограничение цели и срока хранения, безопасность и право на удаление.</div>
+
+<p class="fine">Версия от 18 октября 2026. Это публичный тест: если что-то изменится, покажем новую версию в приложении и заново спросим согласие на необязательные пункты.</p>
+</section>
+
+<!-- ===================== EN ===================== -->
+<section data-l="en">
+<h1>How we handle your data</h1>
+<p class="lead">In short: we keep only what we need to build your plans. Everything else is opt-in, explained, and can be switched off or deleted in one click.</p>
+
+<div class="pledge">
+  <div><b>We don't sell data</b><span>Not to ad networks, partners or "analytics companies". Ever.</span></div>
+  <div><b>No third-party trackers</b><span>No Google Analytics, no Meta or TikTok pixels, no advertising cookies.</span></div>
+  <div><b>Bare minimum</b><span>We don't ask for your phone, email, documents or payment details.</span></div>
+  <div><b>You're in control</b><span>Download everything or delete your account from your profile, instantly.</span></div>
+</div>
+
+<h2>What we store and why</h2>
+<table>
+<tr><th>Data</th><th>Why</th><th>Without it</th></tr>
+<tr><td>Random device ID<br><span class="tag req">required</span></td><td>So your marks and plans open for you. It's a random string in a browser cookie, not your name or number.</td><td>Nothing can be saved.</td></tr>
+<tr><td>Marks, your own places, plans, collections<br><span class="tag req">required</span></td><td>That's your map: "want", "been", "favourite" and saved plans.</td><td>Nothing to show after a reload.</td></tr>
+<tr><td>Settings: name (optional), interests, start area, "avoid crowds"<br><span class="tag req">entered by you</span></td><td>So the agent addresses you by name and plans routes from your area.</td><td>Generic plans from Downtown.</td></tr>
+<tr><td>Location<br><span class="tag opt">only on tap</span></td><td>Count travel time from where you are. One point when you tap "where am I", rounded to ~10 m. No tracking.</td><td>We use your chosen area.</td></tr>
+<tr><td>Plan and place ratings<br><span class="tag opt">personalisation — opt-in</span></td><td>So the agent repeats what you liked and avoids what you didn't.</td><td>Every plan starts from scratch.</td></tr>
+<tr><td>How you use the app (tabs, buttons, plan build time)<br><span class="tag opt">analytics — opt-in</span></td><td>To see what's inconvenient and improve it, looking at totals rather than individuals.</td><td>Only anonymous counts: the ID rotates daily and days can't be linked.</td></tr>
+<tr><td>News and test invites<br><span class="tag opt">opt-in</span></td><td>A rare message when something important ships.</td><td>We never write.</td></tr>
+<tr><td>Feedback via the "Feedback" button</td><td>We read it to fix and improve things. Contact only if you leave one.</td><td>—</td></tr>
+<tr><td>Telegram login<br><span class="tag opt">coming soon, optional</span></td><td>Telegram ID, username and photo, so you can sign in on any device. Telegram does not share your phone number.</td><td>Personal sign-in link, as today.</td></tr>
+</table>
+
+<h2>What we don't collect</h2>
+<ul>
+<li>Phone, email, ID or payment data.</li>
+<li>Continuous location tracking.</li>
+<li>Plain IP addresses: for abuse protection we keep only a salted hash that rotates daily.</li>
+<li>Your activity on other websites.</li>
+</ul>
+
+<h2>How the AI agent works</h2>
+<p>To build a plan, our server sends the AI model (currently Anthropic's Claude; fallbacks DeepSeek, Qwen, GLM and Gemini via WaveSpeed) your request text, interests, start area, name (if given), weather, time and the place catalogue. Your ID and other people's data are not sent. Providers process the request to return an answer, so please don't put anything sensitive in it: IDs, passwords, health details.</p>
+
+<h2>Where and how it's stored</h2>
+<ul>
+<li>Database: Supabase (PostgreSQL) in the EU (Frankfurt). Encrypted in transit (TLS) and at rest.</li>
+<li>Row-level security on every table. The public database key alone can't read anything; a server-only secret is required and never reaches the browser.</li>
+<li>Only you see your plans. A shared link shows the plan without your starting point.</li>
+<li>Unsaved plans: the latest 40 are kept, older ones are removed automatically. Analytics: at most 12 months.</li>
+</ul>
+
+<h2>Your rights</h2>
+<ul>
+<li><b>Access and download</b> everything we store: Profile → "Download my data" (JSON).</li>
+<li><b>Change consents</b> any time: Profile → "My data". Turning analytics off anonymises past events.</li>
+<li><b>Delete your account</b>: Profile → "Delete account". Profile, plans, ratings, feedback and events are erased immediately.</li>
+<li>Questions: use the "Feedback" button on the map.</li>
+</ul>
+
+<div class="note">We follow the principles of the UAE Personal Data Protection Law (<a href="https://u.ae/en/about-the-uae/digital-uae/data/data-protection-laws" target="_blank" rel="noopener">Federal Decree-Law No. 45 of 2021, PDPL</a>) and the GDPR: lawfulness and transparency, data minimisation, purpose and storage limitation, security and the right to erasure.</div>
+
+<p class="fine">Version of 18 October 2026. This is a public beta: if anything changes we'll show the new version in the app and ask again for optional consents.</p>
+</section>
+</main>
+<script>
+(function(){var q=new URLSearchParams(location.search).get('lang');var l=q||(function(){var m=document.cookie.match(/(?:^|; )dm_lang=([^;]*)/);return m?m[1]:null})()||'ru';
+function set(x){document.documentElement.lang=x;document.querySelectorAll('.lang button').forEach(function(b){b.classList.toggle('on',b.dataset.set===x)});document.title=x==='ru'?'Как мы обращаемся с данными — Моя карта':'How we handle your data — My Map';document.cookie='dm_lang='+x+';path=/;max-age=31536000;samesite=lax';}
+set(l==='en'?'en':'ru');document.querySelectorAll('.lang button').forEach(function(b){b.onclick=function(){set(b.dataset.set)}});})();
+</script>
+</body>
+</html>

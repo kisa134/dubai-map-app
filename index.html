@@ -250,6 +250,25 @@ header small{display:block;color:var(--mute);font-size:12px;margin-top:4px}
 .cab .csec>button,.clink button{background:transparent;border:1px solid var(--line,#2a2c31);color:var(--ink,#eee);border-radius:9px;padding:8px 12px;font:600 12.5px Satoshi,system-ui,sans-serif;cursor:pointer}.cnote{font-size:12px;color:var(--mute);line-height:1.45;width:100%}.clink{display:flex;gap:6px;width:100%}.clink input{flex:1;min-width:0;background:#111216;border:1px solid var(--line,#2a2c31);color:var(--mute);border-radius:9px;padding:8px;font:12px ui-monospace,monospace}
 .cab .cdanger{color:#e48a7a!important;border-color:#5a2f2a!important}@media (max-width:520px){.cab .cstats{grid-template-columns:repeat(3,1fr)}}
 .cab textarea.fbt{min-height:64px!important;height:64px}.cab select.fbc{background:#15161a;color:var(--ink,#eee);border:1px solid var(--line,#2a2c31);border-radius:10px;padding:10px;font:14px Satoshi,system-ui,sans-serif;height:auto}
+.prog{border:1px solid var(--line,#2a2c31);border-radius:14px;padding:14px;background:linear-gradient(180deg,rgba(232,176,74,.06),transparent 60%)}.pgh{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}.pgh b{font-size:14px}.pgh span{font:600 12px ui-monospace,monospace;color:var(--gold,#e8b04a)}
+.pgl{list-style:none;margin:0;padding:0}.pgl li{display:flex;gap:10px;padding:6px 0;color:var(--mute);font-size:13px;opacity:.55}.pgl li b{display:block;font-weight:600;color:inherit}.pgl li small{display:block;font-size:11.5px;margin-top:2px;line-height:1.35}.pgl li.ok,.pgl li.cur{opacity:1}.pgl li.ok{color:var(--ink,#eee)}.pgl li.cur{color:var(--gold,#e8b04a)}
+.pgd{flex:0 0 14px;height:14px;border-radius:50%;border:2px solid currentColor;margin-top:2px;position:relative}.pgl li.ok .pgd{background:#5cc28a;border-color:#5cc28a}.pgl li.ok .pgd:after{content:'';position:absolute;left:3px;top:0px;width:4px;height:7px;border:solid #0b0c0e;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.pgl li.cur .pgd{border-right-color:transparent;animation:pgspin .8s linear infinite}@keyframes pgspin{to{transform:rotate(360deg)}}.pgi{font-size:11.5px;color:#e8a36a;margin-top:4px;line-height:1.4}
+.pgdraft{margin-top:12px;border-top:1px dashed var(--line,#2a2c31);padding-top:10px}.pgdh{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold,#e8b04a);margin-bottom:6px}.pgdh span{display:block;text-transform:none;letter-spacing:0;font-size:14px;color:var(--ink,#eee);font-weight:600;margin-top:2px}
+.pgs{display:flex;gap:8px;align-items:baseline;font-size:13px;padding:3px 0;animation:pgin .35s ease both}.pgs i{font-style:normal;flex:0 0 18px;height:18px;border-radius:50%;border:1.5px dashed var(--gold,#e8b04a);font-size:10px;display:grid;place-items:center;color:var(--gold,#e8b04a)}.pgs b{font-variant-numeric:tabular-nums;color:var(--mute)}
+.pgnote{font-size:11.5px;color:var(--mute);margin-top:6px}@keyframes pgin{from{opacity:0;transform:translateY(4px)}}.pnum.draft{background:transparent!important;border:2px dashed #e8b04a;color:#e8b04a}.lnk{background:none;border:0;color:var(--gold,#e8b04a);text-decoration:underline;cursor:pointer;font:inherit;padding:0}
+@media (prefers-reduced-motion:reduce){.pgl li.cur .pgd{animation:none}.pgs{animation:none}}
+.ctog{align-items:flex-start}.ctog span{display:block}.ctog b{display:block;font-weight:600;color:var(--text)}.ctog small{display:block;color:var(--mute);font-size:11.5px;line-height:1.35;margin-top:1px}.ctog input{margin-top:2px;flex:0 0 16px}
+.wcons{margin-top:2px}.wfine a,.cbar a,.cnote a{color:var(--gold)}
+.cbar{position:fixed;left:16px;bottom:16px;z-index:3000;max-width:420px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:0 18px 48px rgba(0,0,0,.5)}.cbar b{font-size:15px}.cbar p{margin:6px 0 2px;color:var(--mute);font-size:13px}
+.cbrow{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:14px}.cbrow button{border:1px solid var(--line);background:none;color:var(--text);border-radius:10px;padding:8px 12px;font:600 13px Satoshi,sans-serif;cursor:pointer}.cbrow button.pri{background:var(--gold);color:#111;border-color:var(--gold)}.cbrow a{font-size:12.5px}
+.ccons{width:100%}.afun{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin:8px 0 6px}.afun div{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:10px;padding:8px 6px;text-align:center;font-size:11px;color:var(--mute)}.afun b{display:block;font-size:17px;color:var(--text)}
+@media (max-width:560px){.cbar{left:8px;right:8px;bottom:8px;max-width:none}.afun{grid-template-columns:repeat(4,1fr)}}
+.qempty{padding:18px;color:var(--mute);font-size:13px;line-height:1.45}.qempty button{display:block;margin-top:10px;background:var(--gold);color:#111;border:0;border-radius:10px;padding:9px 12px;font:600 13px Satoshi,sans-serif;cursor:pointer}
+.fy{margin:12px 0 4px}.fyh{font:600 13px Satoshi,sans-serif;color:var(--gold);text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px}.fyh span{text-transform:none;letter-spacing:0;color:var(--mute);font-weight:500;margin-left:8px;font-size:12px}
+.fyc{display:grid;grid-template-columns:10px 1fr;column-gap:10px;align-items:center;width:100%;text-align:left;background:var(--panel2,#1c1d21);border:1px solid var(--line);color:var(--text);border-radius:12px;padding:9px 12px;margin:0 0 6px;cursor:pointer;font:inherit}.fyc:hover{border-color:var(--gold)}.fyc i{width:9px;height:9px;border-radius:50%;grid-row:span 2}.fyc b{font-size:13.5px}.fyc small{color:var(--mute);font-size:12px}
+.fyempty{color:var(--mute);font-size:13px;background:var(--panel2,#1c1d21);border:1px dashed var(--line);border-radius:12px;padding:12px}.fyempty button{display:block;margin-top:8px;background:none;border:1px solid var(--gold);color:var(--gold);border-radius:9px;padding:7px 11px;font:600 12.5px Satoshi,sans-serif;cursor:pointer}
+.asrc{width:100%;border-collapse:collapse;font-size:12.5px;margin:6px 0 14px}.asrc th,.asrc td{text-align:left;padding:4px 6px;border-bottom:1px solid var(--line)}.asrc th{color:var(--mute);font-weight:500}
 </style>
 </head>
 <body>
@@ -320,22 +339,25 @@ header small{display:block;color:var(--mute);font-size:12px;margin-top:4px}
  const q=new URLSearchParams(location.search);
  if(q.get('owner')){LS.set('dm_owner',q.get('owner'));q.delete('owner');history.replaceState(null,'',location.pathname+(q.toString()?'?'+q:'')+location.hash);}
  if(q.get('guest')==='1'){LS.del('dm_owner');}
- const UQ=q.get('u');if(UQ&&/^[A-Za-z0-9_-]{8,40}$/.test(UQ)&&UQ!==LS.get('dm_uid')&&(!LS.get('dm_uid')||confirm('Войти в профиль по этой ссылке? Открывай только свою ссылку — иначе твои данные увидит её владелец.'))){LS.set('dm_uid',UQ);LS.set('dm_toured','1');LS.del('dm_prefs');q.delete('u');history.replaceState(null,'',location.pathname+(q.toString()?'?'+q:'')+location.hash);window.__LOGIN=1;}
+ const UQ=q.get('u');if(UQ&&/^[A-Za-z0-9_-]{8,40}$/.test(UQ)&&UQ!==LS.get('dm_uid')&&(confirm('Войти в профиль по этой ссылке? Открывай только свою ссылку — иначе твои данные увидит её владелец.'))){LS.set('dm_uid',UQ);LS.set('dm_toured','1');LS.del('dm_prefs');q.delete('u');history.replaceState(null,'',location.pathname+(q.toString()?'?'+q:'')+location.hash);window.__LOGIN=1;}
  let uid=LS.get('dm_uid');if(!uid||!/^[A-Za-z0-9_-]{8,40}$/.test(uid)){let r='';try{const b=new Uint8Array(12);crypto.getRandomValues(b);r=[...b].map(x=>x.toString(36).padStart(2,'0')).join('')}catch(e){r=Math.random().toString(36).slice(2)+Math.random().toString(36).slice(2)}uid=('u'+r).slice(0,26);LS.set('dm_uid',uid);}
  let prefs={};try{prefs=JSON.parse(LS.get('dm_prefs')||'{}')||{}}catch(e){}
  window.ME={uid,key:LS.get('dm_owner')||'',owner:!!LS.get('dm_owner'),prefs,LS,toured:LS.get('dm_toured')==='1'};
 })();
 </script>
-<script src="data.js?v=10"></script>
+<script src="data.js?v=12"></script>
+<script src="i18n.js?v=3"></script>
 <script>
-const CATS={mine:{n:'Мои места',hex:'#5aa9f0'},food:{n:'Рестораны · Greatlist',hex:'#e8b04a'},sport:{n:'Спорт и единоборства',hex:'#9fd36b'},active:{n:'Активный отдых',hex:'#f0705a'},fun:{n:'Развлечения и ночь',hex:'#f06fb0'},spa:{n:'Спа и баня',hex:'#7fc8b8'},hair:{n:'Волосы и груминг',hex:'#c49bf0'},ski:{n:'Горы и лыжи',hex:'#a7b6ff'},car:{n:'Машины и гонки',hex:'#ff8c42'},bike:{n:'Шоссейный вело',hex:'#3fe0a0'},geek:{n:'Гейминг и гик',hex:'#62e3ff'},culture:{n:'Музеи и библиотеки',hex:'#d9c7a3'},user:{n:'Добавлено мной',hex:'#f2f2f2'}};
+const CATS={mine:{n:'Мои места',hex:'#5aa9f0'},food:{n:'Рестораны · Greatlist',hex:'#e8b04a'},sport:{n:'Спорт и единоборства',hex:'#9fd36b'},active:{n:'Активный отдых',hex:'#f0705a'},fun:{n:'Развлечения и ночь',hex:'#f06fb0'},spa:{n:'Спа и баня',hex:'#7fc8b8'},hair:{n:'Волосы и груминг',hex:'#c49bf0'},ski:{n:'Горы и лыжи',hex:'#a7b6ff'},car:{n:'Машины и гонки',hex:'#ff8c42'},bike:{n:'Шоссейный вело',hex:'#3fe0a0'},geek:{n:'Гейминг и гик',hex:'#62e3ff'},culture:{n:'Музеи и библиотеки',hex:'#d9c7a3'},nature:{n:'Пляжи и парки',hex:'#4fc3e8'},life:{n:'Полезное и семья',hex:'#b8d86b'},user:{n:'Добавлено мной',hex:'#f2f2f2'}};
 const SUBS={food:{fine:'Изысканная кухня',smart:'Смарт-кэжуал',cafe:'Городское кафе',bar:'Бар',coffee:'Кофе',street:'Стритфуд'},
  sport:{mma:'MMA',box:'Бокс и муай-тай',bjj:'BJJ',gym:'Залы',padel:'Падел',climb:'Скалолазание',recov:'Восстановление',out:'Улица и бег'},
  car:{track:'Треки',kart:'Картинг',museum:'Музеи авто',exp:'Драйв и впечатления'},
  bike:{route:'Маршруты',climb:'Подъёмы',group:'Заезды и треки',shop:'Веломагазины'},
+ nature:{beach:'Пляжи',park:'Парки и природа',view:'Смотровые'},
+ life:{kids:'С детьми',pet:'С собакой',mall:'Моллы',market:'Рынки и сук',cowork:'Коворкинги'},
  geek:{pc:'Компьютерные клубы',board:'Настолки',comics:'Аниме и комиксы'},
- culture:{museum:'Музеи',lib:'Библиотеки',space:'Пространства'},
- fun:{night:'Клубы',show:'Шоу и арены',sight:'Вечерние виды',season:'Сезонное'}};
+ culture:{museum:'Музеи',lib:'Библиотеки',space:'Пространства',heritage:'Наследие и форты'},
+ fun:{night:'Клубы',show:'Шоу и арены',sight:'Вечерние виды',season:'Сезонное',park:'Парки развлечений'}};
 let HOME=ME.owner?[25.1060,55.2470]:((ME.prefs.home&&ME.prefs.home.length===2)?ME.prefs.home:[25.1972,55.2744]);
 if(!ME.owner){delete CATS.mine;}
 const COUNTRIES={ALL:{n:'Весь мир',v:[[30,30],2]},AE:{n:'ОАЭ',v:[[24.6,55.0],8]},DXB:{n:'Дубай',v:[[25.15,55.24],11]},AT:{n:'Австрия',v:[[47.45,13.2],7]},CH:{n:'Швейцария',v:[[46.75,8.2],8]},GE:{n:'Грузия',v:[[42.1,43.8],7]}};
@@ -385,15 +407,29 @@ function popup(p){const g='https://www.google.com/maps/search/?api=1&query='+enc
  <div class="links"><a href="${g}" target="_blank" rel="noopener">Маршрут</a>${p.gl?`<a class="g" href="${p.gl}" target="_blank" rel="noopener">Greatlist</a>`:''}${p.w?`<a class="g" href="${esc(p.w)}" target="_blank" rel="noopener">Сайт</a>`:''}</div>
  <div class="st">${Object.entries(ST).map(([k,v])=>`<button data-id="${p.id}" data-st="${k}" class="${status[p.id]===k?'on':''}">${v}</button>`).join('')}</div></div>`;}
 document.addEventListener('click',e=>{const b=e.target.closest('.st button');if(!b)return;const id=b.dataset.id,k=b.dataset.st;status[id]=status[id]===k?undefined:k;if(!status[id])delete status[id];render(id);if(window.meSave)meSave();if(window.ev)ev('mark_'+k);});
-function visible(p){if(!on[p.c])return false; if(country==='DXB'&&!inDXB(p)&&p.c!=='user')return false; if(country!=='ALL'&&country!=='DXB'&&p.co!==country&&p.c!=='user')return false; if(SUBS[p.c]&&p.s&&subOn[p.c+':'+p.s]===0)return false; if(onlyMarked&&!status[p.id])return false; if(onlyOpen){const o=openInfo(p);if(!o||!o.o)return false;} const q=document.getElementById('q').value.trim().toLowerCase(); if(!q)return true; return (p.n+' '+p.a+' '+p.d+' '+(p.tags||'')+' '+subName(p)).toLowerCase().includes(q);}
+function visible(p){const _q=qTokens();if(_q.length)return qMatch(p,_q);if(!on[p.c])return false; if(country==='DXB'&&!inDXB(p)&&p.c!=='user')return false; if(country!=='ALL'&&country!=='DXB'&&p.co!==country&&p.c!=='user')return false; if(SUBS[p.c]&&p.s&&subOn[p.c+':'+p.s]===0)return false; if(onlyMarked&&!status[p.id])return false; if(onlyOpen){const o=openInfo(p);if(!o||!o.o)return false;} return true;}
+// ---------- поиск: вся база, слова в любом порядке, синонимы RU/EN ----------
+const SYN=[['баня','банн','sauna','banya','хаммам','hammam','парилк'],['спа','spa','массаж','massage','wellness'],['суши','sushi','япон','japan','омакасе','omakase'],['кофе','coffee','кофейн','cafe','кафе'],['завтрак','breakfast','бранч','brunch'],['пляж','beach','море','купа'],['парк','park','сад','garden'],['детьми','детск','дети','kids','child','семь','family'],['собак','dog','pet','питом'],['коворк','cowork','поработ'],['молл','mall','торгов','шопинг','shopping'],['рын','souk','souq','сук','market','базар'],['музе','museum','галере','gallery'],['бар','bar','коктейл','cocktail','pub'],['клуб','club','ночн','night','dj'],['стейк','steak','мясо','grill','гриль'],['итальян','italian','пицц','pizza','паст'],['индий','indian'],['китай','chinese','азиат','asian'],['арабск','arab','ливан','lebanese','emirati'],['смотров','view','панорам','deck'],['форт','fort','крепост','heritage','наслед','истори'],['каяк','kayak','sup','сап','серф','surf'],['мма','mma','бокс','box','бжж','bjj','единобор','martial'],['зал','gym','фитнес','fitness'],['вело','bike','cycl','велосипед'],['машин','car','гонк','race','картинг','kart','трек','track'],['горы','mountain','хайк','hike','поход','wadi','вади'],['гик','geek','игр','game','настолк','board','аниме','anime','комикс','comic'],['бесплат','free'],['закат','sunset'],['тихо','quiet','спокой','calm'],['дюн','desert','пустын','dune','сафари','safari'],['аквапарк','waterpark','water park','водн'],['зоопарк','zoo','аквариум','aquarium','животн'],['барбер','barber','стрижк','haircut','салон']];
+const ACITY=[['абу','abu dhabi'],['шардж','sharjah'],['аджман','ajman'],['рас','ras al khaimah','rak'],['фуджейр','fujairah'],['хорфак','khorfakkan'],['умм','umm al quwain','uaq'],['айн','al ain'],['хатт','hatta'],['дубай','dubai']];
+const norm=t=>String(t||'').toLowerCase().replace(/ё/g,'е');
+function qTokens(){const el=document.getElementById('q');const v=norm(el?el.value:'').trim();return v?v.split(/[\s,]+/).filter(x=>x.length>1):[];}
+function pIdx(p){if(p._ix)return p._ix;const x=norm([p.n,p.n_en,p.a,p.city,p.d,p.d_en,p.tags,subName(p),CATS[p.c]&&CATS[p.c].n,p.c,p.s].join(' '));p._ix=x;return x;}
+function tokAlts(t){const out=[t];for(const g of SYN.concat(ACITY))if(g.some(w=>t.startsWith(w)||w.startsWith(t)&&t.length>=3))out.push(...g);return out;}
+function qMatch(p,toks){const ix=pIdx(p);return toks.every(t=>tokAlts(t).some(a=>ix.includes(a)));}
+
 let markers={};
 function render(reopen){cluster.clearLayers();markers={};const all=places.concat(userPlaces);const vis=all.filter(visible);const list=document.getElementById('list');list.innerHTML='';
  const order=['mine','user','car','bike','geek','culture','ski','sport','active','fun','spa','hair','food'];
  vis.sort(sortNear?(a,b)=>km(a)-km(b):(a,b)=>order.indexOf(a.c)-order.indexOf(b.c)||a.n.localeCompare(b.n));
+ const _qt=qTokens();if(_qt.length&&!sortNear){const sc=p=>{const n=norm(p.n+' '+(p.n_en||''));return _qt.reduce((a,t)=>a+(n.includes(t)?3:0)+(norm(p.tags).includes(t)?1:0),0);};vis.sort((a,b)=>sc(b)-sc(a)||km(a)-km(b));}
  vis.forEach(p=>{const m=L.marker([p.lat,p.lng],{icon:icon(p)}).bindPopup(popup(p));cluster.addLayer(m);markers[p.id]=m;
   const el=document.createElement('div');el.className='item';el.innerHTML=`<div class="d" style="background:${CATS[p.c].hex}"></div><div><b>${esc(p.n)}</b>${status[p.id]?`<span class="mk" style="display:inline">${ST[status[p.id]]}</span>`:''}<span class="km">${fmtKm(p)}</span>${(()=>{const o=onlyOpen&&openInfo(p);return o&&o.o?`<span class="oh${o.soon?' s':''}">${o.left>=9999?'24/7':'до '+o.t.slice(11,16)}</span>`:'';})()}<span>${esc(subName(p)+(p.a?' · '+p.a:''))}</span></div>`;
   el.onclick=()=>openP(p.id);list.appendChild(el);});
  document.getElementById('count').textContent=`${vis.length} мест${sortNear?' · сначала ближние к дому':''}${onlyMarked?' · только отмеченные':''}${onlyOpen?' · открыто сейчас':''}`;
+ if(_qt.length){const c=document.getElementById('count');c.textContent=vis.length?`${vis.length} мест · поиск по всей базе`:'Ничего не нашёл';
+  if(!vis.length){const q=document.getElementById('q').value.trim();list.innerHTML=`<div class="qempty">Такого места пока нет на карте. Консьерж может подобрать похожее.<button id="qAsk">Спросить консьержа: «${esc(q.slice(0,40))}»</button></div>`;$('qAsk').onclick=()=>{tab('C');cxView('new');$('cxQ').value=q;ev('search_to_concierge');};}
+  else if(vis.length<=60){clearTimeout(window._qfit);window._qfit=setTimeout(()=>{try{map.fitBounds(L.latLngBounds(vis.map(p=>[p.lat,p.lng])).pad(.2),{maxZoom:14});}catch(e){}},450);}
+  clearTimeout(window._qev);window._qev=setTimeout(()=>ev('search',{n:vis.length}),1500);}
  if(reopen)openP(reopen);}
 function openP(id){const m=markers[id];if(m)cluster.zoomToShowLayer(m,()=>m.openPopup());}
 function chips(){const c=document.getElementById('chips');c.innerHTML='';Object.entries(CATS).forEach(([k,v])=>{const n=places.concat(userPlaces).filter(p=>p.c===k).length;if(k==='user'&&!n)return;const b=document.createElement('button');b.className='chip'+(on[k]?' on':'');b.innerHTML=`<span class="d" style="background:${v.hex}"></span>${v.n} <span style="color:var(--mute)">${n}</span>`;b.onclick=()=>{on[k]=on[k]?0:1;chips();render();};c.appendChild(b);});
@@ -430,7 +466,7 @@ const PBY={};places.forEach(p=>PBY[p.id]=p);
 function toast(t){const e=$('toast');e.textContent=t;e.style.display='block';clearTimeout(e._t);e._t=setTimeout(()=>e.style.display='none',2200);}
 function modal(title,html){$('gmT').textContent=title;$('gmB').innerHTML=html;$('gm').style.display='grid';}
 $('gmX').onclick=()=>$('gm').style.display='none';$('gm').onclick=e=>{if(e.target.id==='gm')$('gm').style.display='none';};
-const AH=()=>{const h={'X-UID':ME.uid};if(ME.key)h['X-Owner']=ME.key;return h;};
+const AH=()=>{const h={'X-UID':ME.uid,'X-Lang':window.LANG||'ru'};if(ME.key)h['X-Owner']=ME.key;return h;};
 async function api(path,opt){const r=await fetch(API+path,opt?{method:opt.method||'POST',headers:{'Content-Type':'application/json',...AH()},body:JSON.stringify(opt.body||{})}:{headers:AH()});const j=await r.json();if(!r.ok||j.error)throw new Error(j.error||'ошибка');return j;}
 
 function tab(v){if(v===true)v='C';if(v===false)v='P';
@@ -473,9 +509,38 @@ async function ask(extra){const body={transport:$('oTr').value,origin:ORIGIN,req
  if(extra&&extra.base_plan){body.request='';body.mood='';delete body.origin;delete body.transport;}
  if(!body.request&&!body.mood&&!body.tweak&&!body.now_mode){$('cxQ').focus();$('cxQ').placeholder='Выбери настроение или напиши, чего хочется';return;}
  $('cxGo').disabled=true;$('cxOut').innerHTML=`<div class="load">${extra&&extra.now_mode?'Смотрю, что открыто прямо сейчас и что рядом…':extra?'Переделываю план…':'Собираю сценарий: подбираю места, строю маршрут по дорогам…'}<i></i></div>`;
- try{const j=await api('/api/plan',{body});cur=j;editing=false;altFor=-1;showPlan(j);hist();if(extra&&!extra.now_mode)toast('Новая версия — сохрани, если нравится');}
- catch(e){$('cxOut').innerHTML=`<div class="box2">Не получилось собрать план. ${esc(e.message)}. Попробуй ещё раз.</div>`;}
+ try{const j=await planJob(body);cur=j;editing=false;altFor=-1;draftClear();showPlan(j);hist();if(extra&&!extra.now_mode)toast('Новая версия — сохрани, если нравится');}
+ catch(e){draftClear();$('cxOut').innerHTML=`<div class="box2">${esc(e.message).startsWith('Не получилось')?esc(e.message):'Не получилось собрать план. '+esc(e.message)}. <button class="lnk" id="cxRetry">Попробовать ещё раз</button></div>`;const rb=$('cxRetry');if(rb)rb.onclick=()=>ask(extra);}
  $('cxGo').disabled=false;}
+// ---- сборка плана на глазах ----
+const PG=[['start','Понимаю запрос'],['context','Время, погода, твои оценки'],['draft','Быстрый черновик'],['main','Продумываю детали'],['check','Сверяю часы работы и загрузку'],['fix','Исправляю, если нужно'],['done','Маршрут готов']];
+let draftLayer=null;function draftClear(){if(draftLayer){map.removeLayer(draftLayer);draftLayer=null;}}
+function draftDraw(d){draftClear();const pts=(d.steps||[]).filter(x=>x.place).map(x=>[x.place.lat,x.place.lng]);if(!pts.length)return;draftLayer=L.layerGroup().addTo(map);
+ L.polyline(pts,{color:'#e8b04a',weight:3,opacity:.7,dashArray:'6 8'}).addTo(draftLayer);
+ pts.forEach((ll,i)=>L.marker(ll,{icon:L.divIcon({className:'',html:`<div class="pnum draft">${i+1}</div>`,iconSize:[24,24]}),zIndexOffset:1000}).addTo(draftLayer));
+ try{map.fitBounds(L.latLngBounds(pts).pad(.35),{maxZoom:13,animate:true});}catch(e){}}
+function pgRender(st,elapsed,draft,preview){const got={};st.forEach(x=>{got[x.k]=x;});const fin=!!got.done;
+ const DONE={start:()=>!!got.start,context:()=>!!got.context,draft:()=>!!got.draft,main:()=>!!got.main_done,check:()=>!!got.check&&(!got.fix||fin),fix:()=>fin,done:()=>fin};
+ const keys=PG.map(x=>x[0]).filter(k=>k!=='fix'||got.fix);let curSet=false;
+ const rows=keys.map(k=>{const lab=PG.find(x=>x[0]===k)[1];const g=k==='main'?(got.main_done||got.main):got[k];const done=DONE[k]();
+  let now=false;if(!done){if(k==='draft')now=!got.main_done;else if(!curSet&&k!=='draft'){now=true;curSet=true;}}
+  let sub=g?g.t:'';if(k==='draft'&&!g)sub=got.main_done?'не понадобился — сразу точный план':'набрасываю за пару секунд…';if(k==='main'&&got.main&&!got.main_done)sub=got.main.t;
+  const iss=g&&g.issues&&g.issues.length?`<div class="pgi">${g.issues.map(x=>'· '+esc(String(x).slice(0,110))).join('<br>')}</div>`:'';
+  return `<li class="${done?'ok':now?'cur':''}"><span class="pgd"></span><div><b>${lab}</b>${sub&&sub!==lab?`<small>${esc(sub)}${g&&g.at?` · ${g.at} с`:''}</small>`:''}${iss}</div></li>`;}).join('');
+ const dv=preview||draft;const dl=dv?`<div class="pgdraft"><div class="pgdh">${preview?'План почти готов':'Черновик'}<span>${esc(dv.title||'')}</span></div>${(dv.steps||[]).map((x,i)=>`<div class="pgs"><i>${i+1}</i><b>${esc(x.time||'')}</b> ${esc(x.place?x.place.n:x.title)}</div>`).join('')}<div class="pgnote">${preview?'Последняя проверка и маршрут по дорогам…':'Это быстрый набросок — сейчас уточню время, часы работы и дорогу'}</div></div>`:'';
+ return `<div class="prog"><div class="pgh"><b>Собираю план</b><span>${Math.round(elapsed)} с</span></div><ol class="pgl">${rows}</ol>${dl}</div>`;}
+async function planJob(body){let st0;try{st0=await api('/api/plan/start',{body});}catch(e){if(/404|Not Found/.test(e.message))return api('/api/plan',{body});throw e;}
+ const jid=st0.job;let stages=[],draft=null,preview=null,shownDraft=false,t0=Date.now(),miss=0;
+ const tick=setInterval(()=>{const el=document.querySelector('.pgh span');if(el)el.textContent=Math.round((Date.now()-t0)/1000)+' с';},500);
+ $('cxOut').innerHTML=pgRender([{k:'start',t:'',at:0}],0,null,null);
+ try{$('cxOut').scrollIntoView({behavior:'smooth',block:'start'});}catch(e){}
+ try{for(;;){await sleep(1100);let j;try{j=await api('/api/plan/job/'+jid+'?since='+stages.length);miss=0;}catch(e){if(++miss>6)throw e;continue;}
+  stages=stages.concat(j.stages||[]);if(j.draft)draft=j.draft;if(j.preview)preview=j.preview;
+  if(draft&&!shownDraft){shownDraft=true;draftDraw(draft);ev('plan_draft');}
+  if(j.error)throw new Error(j.error);if(j.done&&j.plan){ev('plan_done',{sec:Math.round(j.elapsed)});return j.plan;}
+  $('cxOut').innerHTML=pgRender(stages,(Date.now()-t0)/1000,draft,preview);
+  if(Date.now()-t0>300000)throw new Error('Слишком долго — модель перегружена');}}
+ finally{clearInterval(tick);}}
 $('cxGo').onclick=()=>ask();
 
 // ---- правки плана ----
@@ -555,7 +620,7 @@ $('cxOut').addEventListener('change',e=>{const i=e.target.dataset.time;if(i===un
 function saveDlg(){const ex=[...new Set(HIST.filter(x=>x.saved).map(x=>x.collection).filter(Boolean))];const cols=[...new Set([...ex,...DEFCOL])];let sel=cur.collection||cols[0];
  modal(cur.saved?'Сохранённый сценарий':'Сохранить сценарий',`<input type="text" id="svT" value="${esc(cur.title||'')}" placeholder="Название"><div style="margin:12px 0 6px;color:var(--mute);font-size:12px">Коллекция</div><div class="colchips" id="svC">${cols.map(c=>`<button data-c="${esc(c)}" class="${c===sel?'on':''}">${esc(c)}</button>`).join('')}</div><input type="text" id="svNew" placeholder="Или новая коллекция"><div class="row"><button class="pri" id="svOk">Сохранить</button>${cur.saved?'<button id="svDel">Убрать из сохранённых</button>':''}</div>`);
  $('svC').onclick=e=>{const b=e.target.closest('button');if(!b)return;sel=b.dataset.c;$('svNew').value='';document.querySelectorAll('#svC button').forEach(x=>x.classList.toggle('on',x===b));};
- $('svOk').onclick=async()=>{const c=$('svNew').value.trim()||sel;try{cur=await api('/api/plan/'+cur.id+'/save',{body:{collection:c,title:$('svT').value.trim(),saved:true}});$('gm').style.display='none';showPlan(cur,true);hist();toast('Сохранено в «'+c+'»');}catch(e){toast('Не сохранилось');}};
+ $('svOk').onclick=async()=>{const c=$('svNew').value.trim()||sel;try{cur=await api('/api/plan/'+cur.id+'/save',{body:{collection:c,title:$('svT').value.trim(),saved:true}});ev('plan_saved');$('gm').style.display='none';showPlan(cur,true);hist();toast('Сохранено в «'+c+'»');}catch(e){toast('Не сохранилось');}};
  if($('svDel'))$('svDel').onclick=async()=>{cur=await api('/api/plan/'+cur.id+'/save',{body:{saved:false}});$('gm').style.display='none';showPlan(cur,true);hist();toast('Убрал из сохранённых');};}
 
 // ---- поделиться ----
@@ -563,6 +628,7 @@ function shareText(pl){const L1=[pl.title||'План'];if(pl.summary)L1.push(pl.
  (pl.steps||[]).forEach(s=>{const p=s.place;if(!p&&!s.title)return;L1.push(`${s.time?s.time+' — ':''}${p?p.n:s.title}${p&&p.a?' ('+p.a+')':''}`);if(p)L1.push('   '+gmap(p));});
  const d=dirUrl(pl);if(d){L1.push('');L1.push('Весь маршрут: '+d);}if(pl.total_cost){L1.push('');L1.push('Бюджет: '+pl.total_cost);}return L1.join('\n');}
 function shareDlg(){const t=shareText(cur);const d=dirUrl(cur);
+ ev('plan_share');
  modal('Поделиться маршрутом',`<textarea id="shT" readonly>${esc(t)}</textarea><div class="row"><button class="pri" id="shCp">Скопировать</button>${navigator.share?'<button id="shNat">Отправить…</button>':''}</div><div class="row"><a href="https://t.me/share/url?url=${encodeURIComponent(d||gmap(cur.steps.find(s=>s.place).place))}&text=${encodeURIComponent(t)}" target="_blank" rel="noopener">Telegram</a><a href="https://wa.me/?text=${encodeURIComponent(t)}" target="_blank" rel="noopener">WhatsApp</a>${d?`<a href="${d}" target="_blank" rel="noopener">Google Maps</a>`:''}</div><p style="color:var(--mute);font-size:12px;margin:10px 0 0">Друзья получат время, места и маршрут в Google Maps — твоя карта и история им не видны.</p>`);
  $('shCp').onclick=async()=>{const a=$('shT');a.select();let ok=false;try{await navigator.clipboard.writeText(t);ok=true;}catch(e){try{ok=document.execCommand('copy');}catch(_){}}toast(ok?'Скопировано':'Выдели текст и скопируй вручную');};
  if($('shNat'))$('shNat').onclick=()=>navigator.share({title:cur.title,text:t}).catch(()=>{});}
@@ -599,7 +665,7 @@ function drawPlan(st){planLayer.clearLayers();map.removeLayer(cluster);planLayer
 $('pbClose').onclick=()=>{map.removeLayer(planLayer);map.addLayer(cluster);$('planbar').style.display='none';};
 
 // ===== Сегодня =====
-const TG={all:['Всё',null],eat:['Поесть',['food','mine']],relax:['Перезагрузка',['spa','hair']],move:['Движ',['sport','active','car','bike','fun']],geek:['Гик и культура',['geek','culture']]};
+const TG={all:['Всё',null],eat:['Поесть',['food','mine']],out:['Пляжи и парки',['nature']],life:['Полезное',['life']],relax:['Перезагрузка',['spa','hair']],move:['Движ',['sport','active','car','bike','fun']],geek:['Гик и культура',['geek','culture']]};
 const OUTDOOR=p=>p.c==='active'||p.c==='bike'||p.c==='ski'||(p.c==='sport'&&p.s==='out');
 let tdQuiet=false,tdGroup='all',tdRad=15,tdW=null,tdTimer=null,todayLayer=L.layerGroup(),tdOrigin=null;
 const tdO=()=>tdOrigin||HOME;
@@ -621,6 +687,24 @@ function tdAdvice(w,n,inside){const out=[];const ins=inside&&inside.length?' С�
  const rain=hrs.find(h=>h.rain>=40);if(rain)out.push(['rain',`Возможен дождь около ${hm(rain.h*60)} (${rain.rain}%) — держи запасной вариант внутри.`]);
  if(n.min>=23*60||n.min<5*60)out.push(['night','Поздно: большинство ресторанов закрывается до 00:00–02:00, ночью остаются клубы, кальянные, круглосуточные кафе.']);
  return out;}
+// ---------- «Для тебя»: персональные рекомендации прямо в браузере ----------
+const INT2C={'Пляжи и парки':['nature'],'Рестораны':['food'],'Кофе и завтраки':['food:coffee','food:cafe'],'Спа и баня':['spa'],'Спорт и MMA':['sport'],'Активный отдых':['active'],'Машины и гонки':['car'],'Шоссейный вело':['bike'],'Ночная жизнь':['fun:night','food:bar'],'Гик и игры':['geek'],'Музеи и культура':['culture'],'Свидания':['food:fine','food:smart','fun:sight'],'С детьми':['life:kids','fun:park','nature'],'Горы и лыжи':['ski']};
+function intKeys(){const E=window.EN_DICT||{};const rev={};Object.keys(INT2C).forEach(k=>{rev[k]=k;if(E[k])rev[E[k]]=k;});return (ME.prefs.interests||[]).map(x=>rev[x]).filter(Boolean);}
+function forYou(O,w,n){const ints=intKeys();const want=new Set(Object.keys(status).filter(k=>status[k]==='want'));const been=new Set(Object.keys(status).filter(k=>status[k]==='been'));
+ const pers=ME.owner||(ME.consent&&ME.consent.personal);const liked=pers?Object.keys(LIKES).filter(k=>LIKES[k].v>0).map(k=>PBY[k]).filter(Boolean):[];const bad=new Set(pers?Object.keys(LIKES).filter(k=>LIKES[k].v<0):[]);
+ const favs=Object.keys(status).filter(k=>status[k]==='fav').map(k=>PBY[k]).filter(Boolean).concat(liked);const favSub=new Set(favs.map(p=>p.c+':'+(p.s||'')));
+ if(!ints.length&&!want.size&&!favs.length)return `<div class="fy"><div class="fyh">Для тебя</div><div class="fyempty">Отметь интересы в кабинете или поставь «хочу» на паре мест — и здесь появятся подборки именно под тебя.<button id="fyCab">Выбрать интересы</button></div></div>`;
+ const hot=w&&+w.feels>=36&&n.min>9*60&&n.min<18*60;const wanted=new Set(ints.flatMap(k=>INT2C[k]||[]));
+ const sc=places.filter(p=>p.co==='AE'&&!p.closed&&!been.has(p.id)&&!bad.has(p.id)&&p.c!=='mine').map(p=>{const k=kmTo({lat:O[0],lng:O[1]},p);const o=openInfo(p);let s=0,why='';
+  if(o&&!o.o)return null;if(hot&&(OUTDOOR(p)||p.c==='nature'))return null;
+  if(want.has(p.id)){s+=4;why='ты отметил «хочу»';}
+  if(wanted.has(p.c)||wanted.has(p.c+':'+p.s)){s+=2;why=why||('под твой интерес: '+(ints.find(i=>(INT2C[i]||[]).some(c=>c===p.c||c===p.c+':'+p.s))||''));}
+  if(favSub.has(p.c+':'+(p.s||''))){s+=1.5;why=why||'похоже на то, что тебе зашло';}
+  if(o&&o.o&&o.left>=90)s+=.8;if(p.pt)s+=.2;s-=k/12;return s>0.9&&why?{p,s,k,o,why}:null;}).filter(Boolean).sort((a,b)=>b.s-a.s);
+ const per={},pick=[];for(const x of sc){if((per[x.p.c]||0)>=2)continue;per[x.p.c]=(per[x.p.c]||0)+1;pick.push(x);if(pick.length>=5)break;}
+ if(!pick.length)return '';
+ return `<div class="fy"><div class="fyh">Для тебя<span>${pers?'по интересам, отметкам и оценкам':'по интересам и отметкам'}</span></div>${pick.map(x=>`<button class="fyc" data-fly="${x.p.id}"><i style="background:${CATS[x.p.c].hex}"></i><b>${esc(x.p.n)}</b><small>${esc(x.why)} · ${x.k<1?'рядом':Math.round(x.k)+' км'}${x.o&&x.o.o?' · '+esc(x.o.left>=9999?'24/7':'до '+x.o.t.slice(11,16)):''}</small></button>`).join('')}</div>`;}
+document.addEventListener('click',e=>{if(e.target&&e.target.id==='fyCab'){cabinet();}});
 function tdRender(fit){const n=dxbNow();const w=tdW;const O=tdO();
  let dtxt=new Intl.DateTimeFormat('ru-RU',{timeZone:'Asia/Dubai',weekday:'long',day:'numeric',month:'long'}).format(new Date());dtxt=dtxt.charAt(0).toUpperCase()+dtxt.slice(1);
  let h=`<div class="tdh"><div><div class="tdt">${hm(n.min)}</div><div class="tdd">${esc(dtxt)}</div></div>`;
@@ -632,6 +716,7 @@ function tdRender(fit){const n=dxbNow();const w=tdW;const O=tdO();
  else h+=`<div class="tdsun">Погода сейчас недоступна</div>`;
  const inside=places.filter(p=>p.co==='AE'&&p.h&&!p.closed&&!OUTDOOR(p)&&['spa','geek','culture','fun','sport','car'].includes(p.c)).map(p=>({p,k:kmTo({lat:O[0],lng:O[1]},p),o:openInfo(p)})).filter(x=>x.o&&x.o.o&&x.o.left>=60&&x.k<=Math.max(tdRad,15)).sort((a,b)=>a.k-b.k).slice(0,3).map(x=>x.p.n+' ('+x.o.t.replace('Открыто ','').replace(/ —.*/,'')+')');
  const adv=tdAdvice(w,n,inside);if(adv.length)h+=`<div class="tdadv">${adv.map(([k,t])=>`<div class="a-${k}">${esc(t)}</div>`).join('')}</div>`;
+ h+=forYou(O,w,n);
  h+=`<div class="tdctl"><div class="tdfrom" id="tdFrom"><button data-o="home" class="${tdOrigin?'':'on'}">${ME.owner?'от дома':'от моей точки'}</button><button data-o="geo" class="${tdOrigin?'on':''}">где я</button></div><div class="tdrad" id="tdRad">${[[5,'5 км'],[15,'15 км'],[60,'весь город']].map(([r,l])=>`<button data-r="${r}" class="${tdRad===r?'on':''}">${l}</button>`).join('')}</div></div>`;
  h+=`<div class="colchips" id="tdG">${Object.entries(TG).map(([k,[l]])=>`<button data-g="${k}" class="${tdGroup===k?'on':''}">${l}</button>`).join('')}</div>`;
  const hot=w&&+w.feels>=35;const cats=TG[tdGroup][1];
@@ -668,11 +753,14 @@ $('vToday').addEventListener('click',e=>{const b=e.target.closest('button');if(!
 // ===== /front =====
 // ===== Публичная версия: профиль, синхронизация, онбординг, отзывы =====
 const AREAS=[['Downtown / Business Bay',[25.1972,55.2744]],['DIFC',[25.2110,55.2820]],['Dubai Marina / JBR',[25.0805,55.1403]],['JLT',[25.0693,55.1418]],['Palm Jumeirah',[25.1124,55.1390]],['Dubai Hills',[25.1060,55.2470]],['Al Barsha',[25.1100,55.2000]],['Jumeirah / Umm Suqeim',[25.1500,55.2100]],['Deira / Bur Dubai',[25.2650,55.3100]],['Mirdif',[25.2200,55.4200]],['Абу-Даби',[24.4539,54.3773]],['Шарджа',[25.3463,55.4209]]];
-const INTS=['Рестораны','Кофе и завтраки','Спа и баня','Спорт и MMA','Активный отдых','Машины и гонки','Шоссейный вело','Ночная жизнь','Гик и игры','Музеи и культура','Свидания','С детьми','Горы и лыжи'];
+const INTS=['Пляжи и парки','Рестораны','Кофе и завтраки','Спа и баня','Спорт и MMA','Активный отдых','Машины и гонки','Шоссейный вело','Ночная жизнь','Гик и игры','Музеи и культура','Свидания','С детьми','Горы и лыжи'];
 let CUR_TAB='P';
-function ev(e){try{fetch(API+'/api/ev',{method:'POST',headers:{'Content-Type':'application/json',...AH()},body:JSON.stringify({e})}).catch(()=>{});}catch(_){}}
+const SRC=(()=>{try{const q=new URLSearchParams(location.search);let v=(q.get('src')||q.get('utm_source')||'').toLowerCase().replace(/[^a-z0-9_.-]/g,'').slice(0,40);
+ if(!v&&document.referrer){try{const h=new URL(document.referrer).hostname;if(h&&h!==location.hostname)v=h.replace(/^www\./,'').slice(0,40);}catch(_){}}
+ const old=ME.LS.get('src1');if(v&&!old)ME.LS.set('src1',v);return old||v||'';}catch(_){return '';}})();
+function ev(e,p){if(SRC){p=Object.assign({},p||{},{src:SRC});}try{fetch(API+'/api/ev',{method:'POST',headers:{'Content-Type':'application/json',...AH()},body:JSON.stringify({e:String(e).toLowerCase(),p:p||null})}).catch(()=>{});}catch(_){}}
 let meT=null;
-function meSave(extra){clearTimeout(meT);const body={marks:status,user_places:userPlaces.map(p=>({n:p.n,d:p.d||'',lat:p.lat,lng:p.lng})),...(extra||{})};meT=setTimeout(()=>api('/api/me',{method:'PUT',body}).catch(()=>{}),extra?0:600);}
+function meSave(extra){clearTimeout(meT);const body={marks:status,user_places:userPlaces.map(p=>({n:p.n,d:p.d||'',lat:p.lat,lng:p.lng})),lang:window.LANG||'ru',...(extra||{})};meT=setTimeout(()=>api('/api/me',{method:'PUT',body}).catch(()=>{}),extra?0:600);}
 function prefsSave(){ME.LS.set('dm_prefs',JSON.stringify(ME.prefs));meSave({prefs:ME.prefs});}
 async function meLoad(){try{const j=await api('/api/me');
  if(ME.key&&!j.owner){ME.LS.set('dm_owner','');toast('Ссылка владельца не подошла — открыто как гость');}
@@ -680,12 +768,22 @@ async function meLoad(){try{const j=await api('/api/me');
  if(!userPlaces.length&&(j.user_places||[]).length){j.user_places.forEach((p,i)=>userPlaces.push({id:'u'+i+'_'+Date.now(),n:p.n,c:'user',lat:p.lat,lng:p.lng,a:'',d:p.d||'',city:''}));if(typeof chips==='function')chips();}
  if(!ME.owner&&(window.__LOGIN||!Object.keys(ME.prefs).length)&&j.prefs&&Object.keys(j.prefs).length){ME.prefs=j.prefs;ME.LS.set('dm_prefs',JSON.stringify(j.prefs));if(j.prefs.home)HOME=j.prefs.home;}
  ME.stats=j.stats||null;if(window.__LOGIN){window.__LOGIN=0;toast('Вошёл в свой кабинет');}
- ME.left=j.plans_left;ME.model=j.model;render();leftBadge();}catch(e){}}
+ ME.left=j.plans_left;ME.model=j.model;ME.consent=j.consent||null;render();leftBadge();
+ if(!ME.owner&&ME.toured&&ME.consent&&(!ME.consent.service||ME.consent.version!==ME.consent.current))setTimeout(consentBar,1200);}catch(e){}}
+// ---------- согласия ----------
+const CONS=[['personal','Учитывать мои оценки и историю','Агент будет повторять то, что тебе зашло, и не предлагать то, что не понравилось.'],['analytics','Помогать улучшать карту','Видим, какие кнопки нажимают и где неудобно, — в целом по всем, без слежки за тобой.'],['marketing','Сообщать о новом','Изредка: новые эмираты, функции, приглашения в тесты.']];
+function consHTML(pre,c){c=c||{};return CONS.map(([k,t,d])=>`<label class="wtog ctog"><input type="checkbox" id="${pre}${k}" ${c[k]?'checked':''}><span><b>${t}</b><small>${d}</small></span></label>`).join('');}
+function consRead(pre){const o={service:true};CONS.forEach(([k])=>{const x=$(pre+k);o[k]=!!(x&&x.checked);});return o;}
+async function consentSave(o){try{const j=await api('/api/consent',{body:o});ME.consent=j.consent;ev('consent',{a:o.analytics?1:0,p:o.personal?1:0,m:o.marketing?1:0});return true;}catch(e){toast('Не сохранилось: '+e.message);return false;}}
+function consentBar(){if($('cBar'))return;document.body.insertAdjacentHTML('beforeend',`<div class="cbar" id="cBar" role="dialog" aria-label="Данные и согласия"><b>Бережно к твоим данным</b><p>Храним только то, без чего не собрать план: отметки, планы и настройки. Не продаём, без чужих трекеров. Остальное — по желанию:</p>${consHTML('cb',ME.consent)}<div class="cbrow"><button class="pri" id="cbAll">Разрешить всё</button><button id="cbSave">Сохранить выбор</button><a href="privacy.html?lang=${window.LANG||'ru'}" target="_blank" rel="noopener">Что и зачем храним</a></div></div>`);
+ const done=async o=>{if(await consentSave(o)){$('cBar').remove();toast('Сохранил. Поменять можно в кабинете');}};
+ $('cbAll').onclick=()=>done({service:true,personal:true,analytics:true,marketing:true});$('cbSave').onclick=()=>done(consRead('cb'));}
+
 function leftBadge(){const c=$('cxCtx');if(!c||ME.left==null||ME.owner)return;let b=$('cxLeft');if(!b){b=document.createElement('span');b.id='cxLeft';c.appendChild(b);}b.textContent='планов сегодня: '+ME.left;}
 // подписи под гостя
 (function(){
  const h1=document.querySelector('header h1');if(ME.owner)h1.insertAdjacentHTML('beforeend','<span class="obadge">владелец</span>');
- document.querySelector('header').insertAdjacentHTML('beforeend',`<div class="hbtn">${ME.owner?'<button id="hAdm" title="Отзывы и статистика">Отзывы</button>':''}<button id="hMe" title="Личный кабинет" aria-label="Личный кабинет"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></button><button id="hTour" title="Как это работает" aria-label="Как это работает">?</button></div>`);
+ document.querySelector('header').insertAdjacentHTML('beforeend',`<div class="hbtn">${ME.owner?'<button id="hAdm" title="Отзывы и статистика">Отзывы</button>':''}<button id="hMe" title="Личный кабинет" aria-label="Личный кабинет"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></button><button id="hLang" data-noi18n title="Language" aria-label="Switch language">${window.LANG==='en'?'RU':'EN'}</button><button id="hTour" title="Как это работает" aria-label="Как это работает">?</button></div>`);
  if(!ME.owner){$('bSort').textContent='Ближе ко мне';const hb=document.querySelector('#nowFrom [data-o=home]');if(hb)hb.textContent='от моей точки';
   $('oCo').innerHTML=['Один','Вдвоём','С друзьями','С детьми','С собакой'].map(x=>`<option>${x}</option>`).join('');
   const mp=document.querySelector('#modal p');if(mp)mp.textContent='Твои отметки и свои места сохраняются автоматически. Здесь — их копия в JSON.';}
@@ -694,7 +792,7 @@ function leftBadge(){const c=$('cxCtx');if(!c||ME.left==null||ME.owner)return;le
  <div id="tour"><div class="thole" id="tHole"></div><div class="tcard" id="tCard" role="dialog" aria-live="polite"></div></div>`);
  document.querySelector('.mapwrap').insertAdjacentHTML('beforeend','<button class="mapbig" id="mapBig" aria-label="Развернуть карту"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>');
  $('mapBig').onclick=()=>{const big=document.documentElement.style.getPropertyValue('--mapH')==='78vh';document.documentElement.style.setProperty('--mapH',big?'46vh':'78vh');setTimeout(()=>map.invalidateSize(),250);};
- $('fbBtn').onclick=()=>fbDlg();$('hTour').onclick=()=>welcome(true);$('hMe').onclick=()=>cabinet();if($('hAdm'))$('hAdm').onclick=adminDlg;
+ $('fbBtn').onclick=()=>fbDlg();$('hLang').onclick=()=>{ev('lang_'+(window.LANG==='en'?'ru':'en'));setLang(window.LANG==='en'?'ru':'en');};$('hTour').onclick=()=>welcome(true);$('hMe').onclick=()=>cabinet();if($('hAdm'))$('hAdm').onclick=adminDlg;
  $('aOk').addEventListener('click',()=>setTimeout(()=>meSave(),50));
 })();
 const _tab=tab;tab=function(v){if(v===true)v='C';if(v===false)v='P';CUR_TAB=v;_tab(v);ev('tab_'+v);if(v==='C')setTimeout(leftBadge,800);};
@@ -707,11 +805,12 @@ function welcome(again){const w=$('wel'),b=w.querySelector('.wbox');const pr=ME.
  ${ME.owner?'':`<div class="wq">Что тебе интересно?</div><div class="wch" id="wInt">${INTS.map(x=>`<button class="${sel.has(x)?'on':''}">${x}</button>`).join('')}</div>
  <div class="wq">Откуда обычно стартуешь?</div><select id="wArea"><option value="-1">Не важно — от Downtown</option>${AREAS.map((a,i)=>`<option value="${i}" ${i===ai?'selected':''}>${a[0]}</option>`).join('')}<option value="geo">Определить по геолокации</option></select>
  <label class="wtog"><input type="checkbox" id="wQuiet" ${pr.quiet===false?'':'checked'}> Не люблю толпы — подбирать тихое время</label>`}
+ ${ME.owner||again?'':`<div class="wq">Твои данные</div><div class="wcons">${consHTML('wc',ME.consent||{})}</div>`}
  <div class="wrow"><button class="pri" id="wTour">Показать, как это работает</button><button id="wSkip">${again?'Закрыть':'Сразу на карту'}</button></div>
- <div class="wfine">Без регистрации. Твои отметки и планы видишь только ты, а в кабинете есть ссылка для входа с другого устройства.</div>`;
+ <div class="wfine">Без регистрации. Храним только нужное для твоих планов, ничего не продаём и не ставим чужих трекеров. Отметки и планы видишь только ты. <a href="privacy.html?lang=${window.LANG||'ru'}" target="_blank" rel="noopener">Что и зачем храним</a></div>`;
  w.classList.add('show');ev(again?'welcome_again':'welcome');
  if($('wInt'))$('wInt').onclick=e=>{const x=e.target.closest('button');if(x)x.classList.toggle('on');};
- const commit=async()=>{if(ME.owner)return;const ints=[...document.querySelectorAll('#wInt button.on')].map(x=>x.textContent);const v=$('wArea').value;ME.prefs.interests=ints;ME.prefs.quiet=$('wQuiet').checked;
+ const commit=async()=>{if(ME.owner)return;if(!again&&$('wcpersonal'))consentSave(consRead('wc'));const ints=[...document.querySelectorAll('#wInt button.on')].map(x=>x.textContent);const v=$('wArea').value;ME.prefs.interests=ints;ME.prefs.quiet=$('wQuiet').checked;
   if(v==='geo'){try{const p=await new Promise((ok,no)=>navigator.geolocation.getCurrentPosition(ok,no,{timeout:8000}));ME.prefs.home=[+p.coords.latitude.toFixed(4),+p.coords.longitude.toFixed(4)];ME.prefs.area='моё местоположение';}catch(e){toast('Геолокация недоступна — беру Downtown');}}
   else if(v!=='-1'){const a=AREAS[+v];ME.prefs.home=a[1];ME.prefs.area=a[0];}else{delete ME.prefs.home;ME.prefs.area='';}
   HOME=ME.prefs.home||[25.1972,55.2744];prefsSave();render();};
@@ -779,7 +878,10 @@ async function adminDlg(){modal('Отзывы и статистика','<div sty
  const cost=d=>((d.tin||0)*2+(d.tout||0)*10)/1e6;const tot=j.daily.reduce((a,d)=>a+cost(d),0);
  const K={bug:'Баг',idea:'Идея',like:'Нравится',hard:'Неудобно'};
  $('gmB').innerHTML=`<div class="adm"><div style="margin-bottom:10px;color:var(--mute);font-size:12px">Модель: ${esc(j.model)} · пользователей: ${j.users} · планов всего: ${j.plans} · расход за 14 дней ≈ $${tot.toFixed(2)}</div>
- <table><tr><th>День</th><th>Люди</th><th>Планы</th><th>≈ $</th><th>Тур</th><th>Отзывы</th></tr>${j.daily.slice().reverse().map(d=>`<tr><td>${d.d.slice(5)}</td><td>${d.users}</td><td>${d.plans}</td><td>${cost(d).toFixed(2)}</td><td>${(d.ev.tour_done||0)}/${(d.ev.tour_start||0)}</td><td>${d.ev.fb_open||0}</td></tr>`).join('')}</table>
+ ${j.by_src&&Object.keys(j.by_src).length?`<b style="font-size:13px">Источники за 14 дней</b><table class="asrc"><tr><th>Источник</th><th>Открыли</th><th>План</th><th>Сохр.</th><th>Шеры</th></tr>${Object.entries(j.by_src).sort((a,b)=>b[1].open-a[1].open).map(([k,v])=>`<tr><td>${esc(k)}</td><td>${v.open}</td><td>${v.plan}</td><td>${v.saved}</td><td>${v.share}</td></tr>`).join('')}</table>`:''}
+ ${j.funnel?`<b style="font-size:13px">Воронка за 14 дней</b><div class="afun">${[['open','Открыли'],['tour','Тур'],['concierge','Консьерж'],['draft','Черновик'],['plan','План'],['saved','Сохранили'],['rated','Оценили']].map(([k,l])=>`<div><b>${j.funnel[k]||0}</b>${l}</div>`).join('')}</div>`:''}
+ ${j.consents?`<div style="margin:6px 0 12px;color:var(--mute);font-size:12px">Согласия: сервис ${j.consents.service||0} · персонализация ${j.consents.personal||0} · аналитика ${j.consents.analytics||0} · новости ${j.consents.marketing||0} · Telegram ${j.consents.telegram||0}${j.retention?` · вернулись в другой день: ${j.retention.users_2plus_days||0} из ${j.retention.users_with_plans||0}`:''}</div>`:''}
+ <table><tr><th>День</th><th>Люди</th><th>Новые</th><th>Планы</th><th>≈ $</th><th>Тур</th><th>Отзывы</th></tr>${j.daily.slice().reverse().map(d=>`<tr><td>${d.d.slice(5)}</td><td>${d.users}</td><td>${d.new_users||0}</td><td>${d.plans}</td><td>${cost(d).toFixed(2)}</td><td>${(d.ev.tour_done||0)}/${(d.ev.tour_start||0)}</td><td>${d.ev.fb_open||0}</td></tr>`).join('')}</table>
  <b style="font-size:13px">Отзывы (${j.feedback.length})</b><div style="margin-top:8px">${j.feedback.map(f=>`<div class="afb ${f.status==='done'?'done':''}"><div class="m">${esc(f.at)} · ${K[f.kind]||esc(f.kind)}${f.rating?' · '+f.rating+'/5':''} · ${esc((f.ctx||{}).tab||'')} ${esc((f.ctx||{}).w||'')}px${f.contact?' · '+esc(f.contact):''}</div>${esc(f.text)||'<i>без текста</i>'}<br><button data-f="${f.id}" data-s="${f.status==='done'?'new':'done'}">${f.status==='done'?'Вернуть':'Сделано'}</button></div>`).join('')||'<div style="color:var(--mute)">Пока нет</div>'}</div></div>`;
  $('gmB').onclick=async e=>{const b=e.target.closest('button[data-f]');if(!b)return;await api('/api/admin/fb/'+b.dataset.f,{body:{status:b.dataset.s}});adminDlg();};}
 
@@ -800,7 +902,14 @@ async function cabinet(){ev('cab_open');modal('Личный кабинет','<di
  <div class="csec"><b>Мои планы</b><button id="cPlans">Открыть историю и коллекции</button></div>
  <div class="csec"><b>Вход с другого устройства</b><div class="cnote">Открой эту ссылку на телефоне или ноутбуке — подтянутся отметки, свои места, планы и настройки. Никому её не отправляй: это как пароль.</div>
  <div class="clink"><input readonly id="cLink" value="${esc(link)}"><button id="cCopy">Копировать</button></div></div>
+ ${ME.owner?'':`<div class="csec"><b>Мои данные</b><div class="cnote">Храним только то, без чего не собрать план. Ничего не продаём. <a href="privacy.html?lang=${window.LANG||'ru'}" target="_blank" rel="noopener">Подробно, что и зачем</a></div><div class="ccons">${consHTML('cc',j.consent||ME.consent)}</div>
+ <button id="cExp">Скачать мои данные</button><button class="cdanger" id="cDel">Удалить аккаунт</button></div>`}
  <div class="csec"><button class="cdanger" id="cNew">Начать с чистого листа</button><span class="cnote">Текущий профиль останется доступен по ссылке выше.</span></div></div>`;
+ if($('cExp')){document.querySelectorAll('.ccons input').forEach(x=>x.onchange=()=>consentSave(consRead('cc')).then(ok=>ok&&toast('Согласия обновлены')));
+  $('cExp').onclick=async()=>{try{const r=await fetch(API+'/api/me/export',{headers:AH()});const b=await r.blob();const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='my-map-data.json';a.click();ev('data_export');}catch(e){toast('Не скачалось: '+e.message);}};
+  $('cDel').onclick=async()=>{if(!confirm('Удалить аккаунт навсегда? Сотрём отметки, свои места, планы, оценки и отзывы. Вернуть будет нельзя.'))return;if(!['удалить','delete'].includes((prompt('Чтобы подтвердить, напиши: удалить')||'').trim().toLowerCase())){toast('Не удалил');return;}
+   try{await api('/api/me',{method:'DELETE'});['dm_uid','dm_prefs','dm_toured','dm_owner','dm_status','dm_user'].forEach(k=>ME.LS.del(k));ME.LS.del('src1');ME.LS.del('dm_lang');document.cookie.split(';').forEach(c=>{const n=c.split('=')[0].trim();if(n.indexOf('dm')>=0||n.indexOf('__Host-')===0)document.cookie=n+'=;Max-Age=0;path=/'+(location.protocol==='https:'?';Secure':'');});alert('Готово: все твои данные удалены.');location.href=location.pathname;}catch(e){toast('Не получилось: '+e.message);}};}
+
  $('cInt').onclick=e=>{const x=e.target.closest('button');if(x)x.classList.toggle('on');};
  $('cCopy').onclick=async()=>{try{await navigator.clipboard.writeText(link);toast('Ссылка скопирована');}catch(e){$('cLink').select();toast('Выдели и скопируй вручную');}ev('cab_link');};
  $('cPlans').onclick=()=>{$('gm').style.display='none';tab('C');try{cxView('saved')}catch(e){}};
