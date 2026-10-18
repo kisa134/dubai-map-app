@@ -80,6 +80,12 @@ html[lang=ru] span[data-l=ru],html[lang=en] span[data-l=en]{display:inline}
 <h2>Как работает ИИ-агент</h2>
 <p>Чтобы собрать план, сервер отправляет модели ИИ (сейчас Claude от Anthropic, резервные — DeepSeek, Qwen, GLM, Gemini через провайдера WaveSpeed) текст твоего запроса, интересы, район старта, имя (если указал), погоду, время и каталог мест. Твой ID, отметки других людей и личные данные сверх этого модели не уходят. Провайдеры обрабатывают запрос, чтобы вернуть ответ. Поэтому не пиши в запросе то, чем не хочешь делиться: паспортные данные, пароли, здоровье.</p>
 
+<p>Чтобы собрать план быстрее, сервер сначала отправляет модели Jev от TypeSafe AI текст запроса (настроение, с кем, бюджет, транспорт), время и погоду, а также список мест из нашей базы с примерным расстоянием до них: Jev за доли секунды оценивает, какие места подходят. Твои точные координаты, ID, имя, отметки и сохранённые планы в Jev не уходят. Текст отзывов о приложении Jev может проверять на мат и спам, без привязки к тебе.</p>
+
+<h2>Вход через Telegram</h2>
+<p>Если ты открываешь карту в Telegram (бот @gotoPlace_bot), Telegram сам передаёт приложению подписанные данные: твой Telegram ID, имя, username и ссылку на фото профиля. Мы проверяем подпись Telegram на сервере — так никто не может войти под тобой — и сохраняем только эти поля, чтобы твои планы и отметки были с тобой на любом устройстве без паролей. Номер телефона и твои чаты Telegram нам недоступны.</p>
+<p>Бот пишет тебе, только если ты сам нажал «Получать напоминания» и разрешил это в Telegram: напоминание о сохранённом плане и подборка не чаще двух раз в неделю. Отключить можно в чате с ботом. При удалении аккаунта удаляется и привязка к Telegram.</p>
+
 <h2>Где и как хранится</h2>
 <ul>
 <li>База данных — Supabase (PostgreSQL), дата-центр в ЕС (Франкфурт). Данные шифруются при передаче (TLS) и на диске.</li>
@@ -98,7 +104,7 @@ html[lang=ru] span[data-l=ru],html[lang=en] span[data-l=en]{display:inline}
 
 <div class="note">Мы следуем принципам закона ОАЭ о защите персональных данных (<a href="https://u.ae/en/about-the-uae/digital-uae/data/data-protection-laws" target="_blank" rel="noopener">Federal Decree-Law No. 45 of 2021, PDPL</a>) и GDPR: законность и прозрачность, минимум данных, ограничение цели и срока хранения, безопасность и право на удаление.</div>
 
-<p class="fine">Версия от 18 октября 2026. Это публичный тест: если что-то изменится, покажем новую версию в приложении и заново спросим согласие на необязательные пункты.</p>
+<p class="fine">Версия от 18 октября 2026, ред. 2 (Telegram и Jev). Это публичный тест: если что-то изменится, покажем новую версию в приложении и заново спросим согласие на необязательные пункты.</p>
 </section>
 
 <!-- ===================== EN ===================== -->
@@ -138,6 +144,12 @@ html[lang=ru] span[data-l=ru],html[lang=en] span[data-l=en]{display:inline}
 <h2>How the AI agent works</h2>
 <p>To build a plan, our server sends the AI model (currently Anthropic's Claude; fallbacks DeepSeek, Qwen, GLM and Gemini via WaveSpeed) your request text, interests, start area, name (if given), weather, time and the place catalogue. Your ID and other people's data are not sent. Providers process the request to return an answer, so please don't put anything sensitive in it: IDs, passwords, health details.</p>
 
+<p>To build plans faster, our server first sends the Jev model by TypeSafe AI your request text (mood, company, budget, transport), the time and weather, plus a list of places from our catalogue with approximate distances; Jev scores in a fraction of a second which places fit. Your exact location, ID, name, marks and saved plans are not sent to Jev. Jev may also check app feedback text for profanity and spam, without linking it to you.</p>
+
+<h2>Signing in with Telegram</h2>
+<p>If you open the map in Telegram (bot @gotoPlace_bot), Telegram passes signed data to the app: your Telegram ID, name, username and profile photo link. We verify Telegram's signature on our server, so nobody can sign in as you, and store only these fields so your plans and marks follow you on any device without passwords. We never get your phone number or your Telegram chats.</p>
+<p>The bot only messages you if you tap “Get reminders” and allow it in Telegram: a reminder about a saved plan and picks no more than twice a week. Turn it off in the bot chat. Deleting your account also removes the Telegram link.</p>
+
 <h2>Where and how it's stored</h2>
 <ul>
 <li>Database: Supabase (PostgreSQL) in the EU (Frankfurt). Encrypted in transit (TLS) and at rest.</li>
@@ -156,7 +168,7 @@ html[lang=ru] span[data-l=ru],html[lang=en] span[data-l=en]{display:inline}
 
 <div class="note">We follow the principles of the UAE Personal Data Protection Law (<a href="https://u.ae/en/about-the-uae/digital-uae/data/data-protection-laws" target="_blank" rel="noopener">Federal Decree-Law No. 45 of 2021, PDPL</a>) and the GDPR: lawfulness and transparency, data minimisation, purpose and storage limitation, security and the right to erasure.</div>
 
-<p class="fine">Version of 18 October 2026. This is a public beta: if anything changes we'll show the new version in the app and ask again for optional consents.</p>
+<p class="fine">Version of 18 October 2026, rev. 2 (Telegram and Jev). This is a public beta: if anything changes we'll show the new version in the app and ask again for optional consents.</p>
 </section>
 </main>
 <script>
