@@ -283,7 +283,7 @@ html.tg #app{height:var(--tg-viewport-stable-height,100dvh)}
 .toast{bottom:calc(24px + var(--sab))}.cbar{bottom:calc(16px + var(--sab))}
 @media (max-width:820px){input,textarea,select{font-size:16px!important}aside{padding-bottom:var(--sab)}.cbar{bottom:calc(8px + var(--sab))}.gm .gbox{max-height:calc(100dvh - var(--sat) - var(--sab) - 24px);overflow:auto}
  .chip,.btn{min-height:34px}.wel{padding:calc(16px + var(--sat)) 16px calc(16px + var(--sab))}}
-.cab a.btn{text-decoration:none;display:inline-flex;align-items:center;padding:8px 14px;border-radius:10px;border:1px solid var(--gold);color:var(--gold);font-weight:600}.wbox .wrow{position:sticky;bottom:-22px;margin:14px -28px -22px;padding:14px 28px 22px;background:linear-gradient(180deg,rgba(20,21,24,0),#141518 30%);z-index:2}@media (max-width:820px){.wbox .wrow{margin:14px -18px -18px;padding:14px 18px calc(18px + var(--sab));bottom:-18px}}.ctg{display:flex;align-items:center;gap:10px}.ctg img{width:34px;height:34px;border-radius:50%}.ctg .ok{color:#7fd38b;font-weight:600}
+.cab a.btn{text-decoration:none;display:inline-flex;align-items:center;padding:8px 14px;border-radius:10px;border:1px solid var(--gold);color:var(--gold);font-weight:600}.wbox .wrow{position:sticky;bottom:-22px;margin:14px -28px -22px;padding:14px 28px 22px;background:linear-gradient(180deg,rgba(20,21,24,0),#141518 30%);z-index:2}@media (max-width:820px){.wbox .wrow{margin:14px -18px -18px;padding:14px 18px calc(18px + var(--sab));bottom:-18px}}.chip.lay{border-style:dashed}.chip.lay.on{border-style:solid}.ctg{display:flex;align-items:center;gap:10px}.ctg img{width:34px;height:34px;border-radius:50%}.ctg .ok{color:#7fd38b;font-weight:600}
 </style>
 </head>
 <body>
@@ -360,14 +360,15 @@ html.tg #app{height:var(--tg-viewport-stable-height,100dvh)}
  window.ME={uid,key:LS.get('dm_owner')||'',owner:!!LS.get('dm_owner'),prefs,LS,toured:LS.get('dm_toured')==='1'};
 })();
 </script>
-<script src="data.js?v=12"></script>
-<script src="i18n.js?v=4"></script>
+<script src="data.js?v=13"></script>
+<script src="i18n.js?v=5"></script>
 <script>
 const CATS={mine:{n:'Мои места',hex:'#5aa9f0'},food:{n:'Рестораны · Greatlist',hex:'#e8b04a'},sport:{n:'Спорт и единоборства',hex:'#9fd36b'},active:{n:'Активный отдых',hex:'#f0705a'},fun:{n:'Развлечения и ночь',hex:'#f06fb0'},spa:{n:'Спа и баня',hex:'#7fc8b8'},hair:{n:'Волосы и груминг',hex:'#c49bf0'},ski:{n:'Горы и лыжи',hex:'#a7b6ff'},car:{n:'Машины и гонки',hex:'#ff8c42'},bike:{n:'Шоссейный вело',hex:'#3fe0a0'},geek:{n:'Гейминг и гик',hex:'#62e3ff'},culture:{n:'Музеи и библиотеки',hex:'#d9c7a3'},nature:{n:'Пляжи и парки',hex:'#4fc3e8'},life:{n:'Полезное и семья',hex:'#b8d86b'},user:{n:'Добавлено мной',hex:'#f2f2f2'}};
 const SUBS={food:{fine:'Изысканная кухня',smart:'Смарт-кэжуал',cafe:'Городское кафе',bar:'Бар',coffee:'Кофе',street:'Стритфуд'},
- sport:{mma:'MMA',box:'Бокс и муай-тай',bjj:'BJJ',gym:'Залы',padel:'Падел',climb:'Скалолазание',recov:'Восстановление',out:'Улица и бег'},
- car:{track:'Треки',kart:'Картинг',museum:'Музеи авто',exp:'Драйв и впечатления'},
- bike:{route:'Маршруты',climb:'Подъёмы',group:'Заезды и треки',shop:'Веломагазины'},
+ sport:{mma:'MMA',box:'Бокс и муай-тай',bjj:'BJJ',park:'Паркур и ниндзя',gym:'Залы',padel:'Падел',climb:'Скалолазание',recov:'Восстановление',out:'Улица и бег'},
+ active:{desert:'Багги и дюны',horse:'Конные клубы',water:'Вода',air:'Небо и высота',mount:'Горы и хайк',indoor:'Под крышей'},
+ car:{track:'Треки',kart:'Картинг',drift:'Дрифт',museum:'Музеи авто',exp:'Драйв и впечатления'},
+ bike:{route:'Маршруты',rent:'Прокат',climb:'Подъёмы',group:'Заезды и треки',shop:'Веломагазины'},
  nature:{beach:'Пляжи',park:'Парки и природа',view:'Смотровые'},
  life:{kids:'С детьми',pet:'С собакой',mall:'Моллы',market:'Рынки и сук',cowork:'Коворкинги'},
  geek:{pc:'Компьютерные клубы',board:'Настолки',comics:'Аниме и комиксы'},
@@ -447,7 +448,9 @@ function render(reopen){cluster.clearLayers();markers={};const all=places.concat
   clearTimeout(window._qev);window._qev=setTimeout(()=>ev('search',{n:vis.length}),1500);}
  if(reopen)openP(reopen);}
 function openP(id){const m=markers[id];if(m)cluster.zoomToShowLayer(m,()=>m.openPopup());}
-function chips(){const c=document.getElementById('chips');c.innerHTML='';Object.entries(CATS).forEach(([k,v])=>{const n=places.concat(userPlaces).filter(p=>p.c===k).length;if(k==='user'&&!n)return;const b=document.createElement('button');b.className='chip'+(on[k]?' on':'');b.innerHTML=`<span class="d" style="background:${v.hex}"></span>${v.n} <span style="color:var(--mute)">${n}</span>`;b.onclick=()=>{on[k]=on[k]?0:1;chips();render();};c.appendChild(b);});
+const LAYERS={act:{n:'Активный досуг',cats:['active','sport','car','bike'],off:{'sport:gym':0,'sport:padel':0,'sport:recov':0,'car:museum':0,'bike:shop':0}}};let layer=null;
+function setLayer(k){layer=layer===k?null:k;Object.keys(on).forEach(c=>on[c]=layer?(LAYERS[k].cats.includes(c)?1:0):1);Object.keys(subOn).forEach(x=>subOn[x]=1);if(layer)Object.assign(subOn,LAYERS[k].off);subOpen=!!layer;const bs=document.getElementById('bSub');if(bs)bs.textContent=subOpen?'Подкатегории ▴':'Подкатегории ▾';chips();render();ev('layer',{k:layer||'off'});}
+function chips(){const c=document.getElementById('chips');c.innerHTML='';Object.entries(LAYERS).forEach(([k,v])=>{const n=places.filter(p=>v.cats.includes(p.c)&&!(v.off[p.c+':'+p.s]===0)).length;const b=document.createElement('button');b.className='chip lay'+(layer===k?' on':'');b.innerHTML=`<span class="d" style="background:linear-gradient(135deg,#f0705a,#9fd36b,#ff8c42,#3fe0a0)"></span>${v.n} <span style="color:var(--mute)">${n}</span>`;b.onclick=()=>setLayer(k);c.appendChild(b);});Object.entries(CATS).forEach(([k,v])=>{const n=places.concat(userPlaces).filter(p=>p.c===k).length;if(k==='user'&&!n)return;const b=document.createElement('button');b.className='chip'+(on[k]?' on':'');b.innerHTML=`<span class="d" style="background:${v.hex}"></span>${v.n} <span style="color:var(--mute)">${n}</span>`;b.onclick=()=>{on[k]=on[k]?0:1;chips();render();};c.appendChild(b);});
  const s=document.getElementById('sub');s.innerHTML='';let any=false;Object.entries(SUBS).forEach(([cat,o])=>{if(!on[cat])return;any=true;Object.entries(o).forEach(([k,v])=>{const key=cat+':'+k;const b=document.createElement('button');b.className='chip'+(subOn[key]?' on':'');b.innerHTML=`<span class="d" style="background:${CATS[cat].hex}"></span>${v}`;b.onclick=()=>{subOn[key]=subOn[key]?0:1;chips();render();};s.appendChild(b);});});s.className='sub'+(any&&subOpen?' show':'');}
 let subOpen=false;document.getElementById('bSub').onclick=e=>{subOpen=!subOpen;e.target.textContent=subOpen?'Подкатегории ▴':'Подкатегории ▾';chips();};
 document.getElementById('q').oninput=()=>render();
