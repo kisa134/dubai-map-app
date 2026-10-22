@@ -86,6 +86,11 @@ html[lang=ru] span[data-l=ru],html[lang=en] span[data-l=en]{display:inline}
 <p>Если ты открываешь карту в Telegram (бот @gotoPlace_bot), Telegram сам передаёт приложению подписанные данные: твой Telegram ID, имя, username и ссылку на фото профиля. Мы проверяем подпись Telegram на сервере — так никто не может войти под тобой — и сохраняем только эти поля, чтобы твои планы и отметки были с тобой на любом устройстве без паролей. Номер телефона и твои чаты Telegram нам недоступны.</p>
 <p>Бот пишет тебе, только если ты сам нажал «Получать напоминания» и разрешил это в Telegram: напоминание о сохранённом плане и подборка не чаще двух раз в неделю. Отключить можно в чате с ботом. При удалении аккаунта удаляется и привязка к Telegram.</p>
 
+<h2>Голосования, «часы неверные» и точка работы</h2>
+<p><b>Голосование «Куда идём?».</b> Храним только список мест и голоса — 14 дней. Имени, отметок и истории автора в голосовании нет. Чтобы один человек голосовал один раз, для гостей без профиля мы храним не IP, а необратимый отпечаток (хеш) от IP и браузера.</p>
+<p><b>«Часы неверные / закрыто».</b> Храним, к какому месту отметка, что не так и твой комментарий, если ты его написал. Нужно, чтобы держать карту честной: три одинаковые отметки от разных людей отправляют место на проверку.</p>
+<p><b>Точка работы.</b> Если ты её указал — хранится в твоём профиле, как точка дома, примерно (район или точность около 100 м). Нужна только для фильтров «≤ 15 / 30 минут». Модели ИИ получают расстояние или время в пути, а не координаты. Удалить — «Не указывать» в окне «Работа».</p>
+<p><b>Фильтры «с детьми», «с собакой», «вдвоём», «под крышей»</b> работают прямо в браузере и никуда не отправляются.</p>
 <h2>Где и как хранится</h2>
 <ul>
 <li>База данных — Supabase (PostgreSQL), дата-центр в ЕС (Франкфурт). Данные шифруются при передаче (TLS) и на диске.</li>
@@ -104,7 +109,7 @@ html[lang=ru] span[data-l=ru],html[lang=en] span[data-l=en]{display:inline}
 
 <div class="note">Мы следуем принципам закона ОАЭ о защите персональных данных (<a href="https://u.ae/en/about-the-uae/digital-uae/data/data-protection-laws" target="_blank" rel="noopener">Federal Decree-Law No. 45 of 2021, PDPL</a>) и GDPR: законность и прозрачность, минимум данных, ограничение цели и срока хранения, безопасность и право на удаление.</div>
 
-<p class="fine">Версия от 18 октября 2026, ред. 2 (Telegram и Jev). Это публичный тест: если что-то изменится, покажем новую версию в приложении и заново спросим согласие на необязательные пункты.</p>
+<p class="fine">Версия от 22 октября 2026, ред. 3 (голосования, отметки о часах, точка работы). Это публичный тест: если что-то изменится, покажем новую версию в приложении и заново спросим согласие на необязательные пункты.</p>
 </section>
 
 <!-- ===================== EN ===================== -->
@@ -150,6 +155,11 @@ html[lang=ru] span[data-l=ru],html[lang=en] span[data-l=en]{display:inline}
 <p>If you open the map in Telegram (bot @gotoPlace_bot), Telegram passes signed data to the app: your Telegram ID, name, username and profile photo link. We verify Telegram's signature on our server, so nobody can sign in as you, and store only these fields so your plans and marks follow you on any device without passwords. We never get your phone number or your Telegram chats.</p>
 <p>The bot only messages you if you tap “Get reminders” and allow it in Telegram: a reminder about a saved plan and picks no more than twice a week. Turn it off in the bot chat. Deleting your account also removes the Telegram link.</p>
 
+<h2>Votes, "wrong hours" and work location</h2>
+<p><b>"Where are we going?" votes.</b> We store only the list of places and the votes, for 14 days. The author's name, marks and history are not part of a vote. To keep it one vote per person, for guests without a profile we store an irreversible hash of IP and browser, not the IP itself.</p>
+<p><b>"Wrong hours / closed".</b> We store which place, what's wrong and your comment if you wrote one. Three matching reports from different people send the place for review.</p>
+<p><b>Work location.</b> If you set it, it's stored in your profile like your home point, approximately (district or ~100 m). Used only for the "≤ 15 / 30 min" filters. AI models get distances or travel times, not coordinates. Remove it with "Don't set" in the Work dialog.</p>
+<p><b>Filters "with kids", "with dog", "for two", "indoors"</b> run in your browser and are not sent anywhere.</p>
 <h2>Where and how it's stored</h2>
 <ul>
 <li>Database: Supabase (PostgreSQL) in the EU (Frankfurt). Encrypted in transit (TLS) and at rest.</li>
@@ -168,7 +178,7 @@ html[lang=ru] span[data-l=ru],html[lang=en] span[data-l=en]{display:inline}
 
 <div class="note">We follow the principles of the UAE Personal Data Protection Law (<a href="https://u.ae/en/about-the-uae/digital-uae/data/data-protection-laws" target="_blank" rel="noopener">Federal Decree-Law No. 45 of 2021, PDPL</a>) and the GDPR: lawfulness and transparency, data minimisation, purpose and storage limitation, security and the right to erasure.</div>
 
-<p class="fine">Version of 18 October 2026, rev. 2 (Telegram and Jev). This is a public beta: if anything changes we'll show the new version in the app and ask again for optional consents.</p>
+<p class="fine">Version of 22 October 2026, rev. 3 (votes, hours reports, work location). This is a public beta: if anything changes we'll show the new version in the app and ask again for optional consents.</p>
 </section>
 </main>
 <script>

@@ -14,7 +14,7 @@ if(/tgWebApp/.test(location.hash+location.search)||/Telegram/i.test(navigator.us
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=clash-display@500,600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0e0f11;--panel:#16171a;--panel2:#1d1f23;--line:#2a2c31;--text:#ecebe6;--mute:#9a9890;--gold:#e8b04a;
+:root{--bg:#0d0e10;--panel:#15161a;--panel2:#1d1f24;--line:#2a2c32;--text:#f0eee8;--mute:#9c9a93;--gold:#efb54e;
 --food:#e8b04a;--spa:#7fc8b8;--hair:#c49bf0;--active:#f0705a;--mine:#5aa9f0;--sport:#9fd36b;--fun:#f06fb0;--user:#f2f2f2}
 *{box-sizing:border-box}html,body{margin:0;height:100%;background:var(--bg);color:var(--text);font:14px/1.45 Satoshi,system-ui,sans-serif}
 #app{display:grid;grid-template-columns:380px 1fr;height:100vh}
@@ -285,6 +285,7 @@ html.tg #app{height:var(--tg-viewport-stable-height,100dvh)}
  .chip,.btn{min-height:34px}.wel{padding:calc(16px + var(--sat)) 16px calc(16px + var(--sab))}}
 .cab a.btn{text-decoration:none;display:inline-flex;align-items:center;padding:8px 14px;border-radius:10px;border:1px solid var(--gold);color:var(--gold);font-weight:600}.wbox .wrow{position:sticky;bottom:-22px;margin:14px -28px -22px;padding:14px 28px 22px;background:linear-gradient(180deg,rgba(20,21,24,0),#141518 30%);z-index:2}@media (max-width:820px){.wbox .wrow{margin:14px -18px -18px;padding:14px 18px calc(18px + var(--sab));bottom:-18px}}.chip.lay{border-style:dashed}.chip.lay.on{border-style:solid}.ctg{display:flex;align-items:center;gap:10px}.ctg img{width:34px;height:34px;border-radius:50%}.ctg .ok{color:#7fd38b;font-weight:600}
 </style>
+<link rel="stylesheet" href="m.css?v=4">
 </head>
 <body>
 <div id="app">
@@ -360,8 +361,8 @@ html.tg #app{height:var(--tg-viewport-stable-height,100dvh)}
  window.ME={uid,key:LS.get('dm_owner')||'',owner:!!LS.get('dm_owner'),prefs,LS,toured:LS.get('dm_toured')==='1'};
 })();
 </script>
-<script src="data.js?v=13"></script>
-<script src="i18n.js?v=5"></script>
+<script src="data.js?v=14"></script>
+<script src="i18n.js?v=6"></script>
 <script>
 const CATS={mine:{n:'Мои места',hex:'#5aa9f0'},food:{n:'Рестораны · Greatlist',hex:'#e8b04a'},sport:{n:'Спорт и единоборства',hex:'#9fd36b'},active:{n:'Активный отдых',hex:'#f0705a'},fun:{n:'Развлечения и ночь',hex:'#f06fb0'},spa:{n:'Спа и баня',hex:'#7fc8b8'},hair:{n:'Волосы и груминг',hex:'#c49bf0'},ski:{n:'Горы и лыжи',hex:'#a7b6ff'},car:{n:'Машины и гонки',hex:'#ff8c42'},bike:{n:'Шоссейный вело',hex:'#3fe0a0'},geek:{n:'Гейминг и гик',hex:'#62e3ff'},culture:{n:'Музеи и библиотеки',hex:'#d9c7a3'},nature:{n:'Пляжи и парки',hex:'#4fc3e8'},life:{n:'Полезное и семья',hex:'#b8d86b'},user:{n:'Добавлено мной',hex:'#f2f2f2'}};
 const SUBS={food:{fine:'Изысканная кухня',smart:'Смарт-кэжуал',cafe:'Городское кафе',bar:'Бар',coffee:'Кофе',street:'Стритфуд'},
@@ -390,7 +391,8 @@ esri();
 const cluster=L.markerClusterGroup({showCoverageOnHover:false,maxClusterRadius:38,disableClusteringAtZoom:16});map.addLayer(cluster);
 const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 const km=p=>{const R=6371,r=Math.PI/180,dl=(p.lat-HOME[0])*r,dg=(p.lng-HOME[1])*r,x=Math.sin(dl/2)**2+Math.cos(HOME[0]*r)*Math.cos(p.lat*r)*Math.sin(dg/2)**2;return 2*R*Math.asin(Math.sqrt(x));};
-const fmtKm=p=>{const k=km(p);if(k>400)return CN[p.co]||'';return k<1?'<1 км':k<100?Math.round(k)+' км':Math.round(k/10)*10+' км';};
+const fmtKm=p=>{const k=km(p);if(k>400)return CN[p.co]||'';const t=k<1?'<1 км':k<100?Math.round(k)+' км':Math.round(k/10)*10+' км';return k>=1.2&&k<150&&(p.co||'AE')==='AE'?t+' · '+_dmin(k):t;};
+function _dmin(k){const r=k*1.35;return Math.round(r/(r<15?32:r<40?55:85)*60+6)+' мин';}
 const TZW=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
 function dxbNow(){const f=new Intl.DateTimeFormat('en-US',{timeZone:'Asia/Dubai',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());const g=t=>f.find(x=>x.type===t).value;return{wd:TZW.indexOf(g('weekday')),min:(+g('hour')%24)*60+ +g('minute')};}
 const hm=m=>{m=((m%1440)+1440)%1440;return String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0');};
@@ -962,5 +964,6 @@ if(TGA){const ov=()=>['gm','modal','addm','wel'].some(id=>{const e=$(id);if(!e)r
  else if(!ME.toured)setTimeout(()=>welcome(false),500);})();
 
 </script>
+<script src="v14.js?v=3"></script>
 </body>
 </html>
